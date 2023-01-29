@@ -1,0 +1,13 @@
+https://singimail-my.sharepoint.com/:f:/g/personal/sgavric_singimail_rs/EpLhntDsTgtDiZzOFfrveGkB6CvbiUG-x2h7d_Ameyp3Xg
+
+Sistem
+User: nosql
+Password: nosql
+
+MySQL
+root
+Nosql123*
+
+ArangoDB
+root
+nosql
