@@ -3,21 +3,21 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="root"
+    password="pedja10"
 )
 
 # print(mydb)
 
 mycursor = mydb.cursor()
 
-# mycursor.execute("DROP DATABASE IF EXISTS nosql")
+# mycursor.execute("DROP DATABASE IF EXISTS vezbe_nosql")
 
-mycursor.execute("CREATE DATABASE IF NOT EXISTS nosql")
+mycursor.execute("CREATE DATABASE IF NOT EXISTS vezbe_nosql")
 
 mycursor.execute("SHOW DATABASES")
 dbs = mycursor.fetchall()
 print(dbs)
-mycursor.execute("USE nosql")
+mycursor.execute("USE vezbe_nosql")
 
 #mycursor.execute("DROP TABLE IF EXISTS customers")
 

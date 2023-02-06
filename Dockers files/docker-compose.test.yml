@@ -1,0 +1,48 @@
+version: '3.9'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.back
+    command: gunicorn --bind 0.0.0.0:5000 backend.main:app
+    environment: 
+      ENV : test
+    networks: 
+      - net_mongo
+      - net_app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+  front:
+    container_name: front
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.front
+    networks:
+      - net_app
+    ports:
+      - "80:80"
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: ctbms
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    networks: 
+      - net_mongo
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - type: volume
+        source: data_db
+        target: /data/conf
+
+networks:
+    net_mongo:
+    net_app:
+
+volumes: 
+    data_db:
