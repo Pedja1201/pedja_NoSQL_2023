@@ -1,0 +1,32 @@
+- Pokertanje dockera na root putanji repozitorijuma gde se nalazi docker file
+  *Mora da bude pokrenut Docker Desktop app
+docker-compose -f docker-compose.dev.yml up
+
+- Bildovanje dokera, gde se pokrece u pozadini iako pise done.
+docker-compose -f docker-compose.dev.yml up --build -d
+
+- Pokretanje mongodb shell
+    Commands to start:
+        docker-compose up -d
+
+    Commands to stop:
+        docker-compose down
+
+    Commands to run CLI via container:
+        docker exec -it mongo bash
+
+        mongo --username root --password password --authenticationDatabase admin
+
+
+
+
+
+- Gasenje dockera nakon ctrl+c (Izlazak sa mongo servera)
+docker-compose -f docker-compose.dev.yml down 
+
+
+- Brisanje volume (Memorije kontejnera)
+ docker volume prune
+
+* Dokumentacija Docker command
+https://docs.docker.com/engine/reference/commandline/docker/

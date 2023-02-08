@@ -4,18 +4,18 @@ version: '3.9'
 services:
   mongo:
     container_name: mongo
-    image: mongo
+    image: mongo:latest
     restart: always
     environment:
       MONGO_INITDB_DATABASE: nosql
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_ROOT_PASSWORD: password
     networks: 
       - net_mongo
     ports:
       - 27017:27017
     volumes:
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./database-data:/data/db
       - type: volume
         source: data_db
         target: /data/conf
@@ -29,7 +29,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_SERVER: mongo
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
     networks:
       - net_mongo
       

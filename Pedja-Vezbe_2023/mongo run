@@ -1,0 +1,2 @@
+command:
+    bin\mongod.exe --dbpath=data
