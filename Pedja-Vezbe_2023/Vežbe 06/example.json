@@ -1,0 +1,9 @@
+{
+    "types_of_institutions":{
+        "columns":["TIP_UST"],
+        "values":["UN"],
+        "content":[
+            "high_education_institution"
+        ]
+    }
+}
