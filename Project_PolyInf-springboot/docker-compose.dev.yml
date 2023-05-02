@@ -41,11 +41,11 @@ services:
     volumes:
       - arangodb_data_container:/var/lib/arangodb3
       - arangodb_apps_data_container:/var/lib/arangodb3-apps
-
+      
 networks:
     net_mongo:
 
-volumes:
+volumes: 
     data_db:
     arangodb_data_container:
     arangodb_apps_data_container:

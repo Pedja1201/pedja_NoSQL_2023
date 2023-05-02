@@ -20,9 +20,9 @@ class MySQLUtils:
 
                 try: 
                     self.mydb = mysql.connector.connect(
-                        host=config_json["host"],
+                        host=config_json["localhost"],
                         user=config_json["user"],
-                        password=config_json["password"]
+                        password=config_json["pedja10"]
                     )
                     self.mycursor = self.mydb.cursor()
                     statusBar.showMessage("Connection made!")

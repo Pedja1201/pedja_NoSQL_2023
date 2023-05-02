@@ -4,6 +4,7 @@
 from utils.mongo_utils import MongoUtils
 from bson.json_util import loads, dumps
 
+
 class MongoTabModel: 
     def __init__(self):
         self.mongo_utils = MongoUtils()
