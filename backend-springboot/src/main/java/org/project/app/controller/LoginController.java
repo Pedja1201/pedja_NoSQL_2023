@@ -1,8 +1,12 @@
 package org.project.app.controller;
 
 
+import org.project.app.dto.AdminDTO;
 import org.project.app.dto.TokenDTO;
 import org.project.app.dto.UserDTO;
+import org.project.app.model.Admin;
+import org.project.app.model.UserPermission;
+import org.project.app.service.AdminService;
 import org.project.app.service.PermissionService;
 import org.project.app.utils.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +39,8 @@ public class LoginController { //TODO:RAspodeliti uloge prilikom register: ROLE_
     @Autowired
     private UserDetailsService userDetailsService;
 
-//    @Autowired
-//    private AdminService adminService;
+    @Autowired
+    private AdminService adminService;
 
     @Autowired
     private PermissionService permissionService;
@@ -67,23 +71,23 @@ public class LoginController { //TODO:RAspodeliti uloge prilikom register: ROLE_
         }
     }
 
-//    @RequestMapping(path = "/registerAdmin", method = RequestMethod.POST)
-//    public ResponseEntity<AdminDTO> registerAdmin(@RequestBody AdminDTO admin) {
-//        // Novi korisnik se registruje kreiranjem instance korisnika
-//        // cija je lozinka enkodovana.
-//        Admin newAdmin = new Admin(null, admin.getUsername(),
-//                passwordEncoder.encode(admin.getPassword()), admin.getFirstName(),
-//                admin.getLastName(), admin.getEmail(), admin.getUpin());
-//        newAdmin = adminService.save(newAdmin);
-//        // Dodavanje prava pristupa.
-//        newAdmin.setUserPermissions(new HashSet<UserPermission>());
-//        newAdmin.getUserPermissions()                                //Trazimo id=1 zato sto je Admin Administrator (ROLE_ADMIN)
-//                .add(new UserPermission(null, newAdmin, permissionService.findOne(1l).get()));
-//        adminService.save(newAdmin);
-//
-//        return new ResponseEntity<AdminDTO>(
-//                new AdminDTO(newAdmin.getId(), newAdmin.getUsername(), null,
-//                        newAdmin.getFirstName(), newAdmin.getLastName(),
-//                        newAdmin.getEmail(), newAdmin.getUpin() ), HttpStatus.OK);
-//    }
+    @RequestMapping(path = "/registerAdmin", method = RequestMethod.POST)
+    public ResponseEntity<AdminDTO> registerAdmin(@RequestBody AdminDTO admin) {
+        // Novi korisnik se registruje kreiranjem instance korisnika
+        // cija je lozinka enkodovana.
+        Admin newAdmin = new Admin(null, admin.getUsername(),
+                passwordEncoder.encode(admin.getPassword()), admin.getIme(),
+                admin.getPrezime(), admin.getEmail(), admin.getJmbg());
+        newAdmin = adminService.save(newAdmin);
+        // Dodavanje prava pristupa.
+        newAdmin.setUserPermissions(new HashSet<UserPermission>());
+        newAdmin.getUserPermissions()                                //Trazimo id=1 zato sto je Admin Administrator (ROLE_ADMIN)
+                .add(new UserPermission(null, newAdmin, permissionService.findOne(1l).get()));
+        adminService.save(newAdmin);
+
+        return new ResponseEntity<AdminDTO>(
+                new AdminDTO(newAdmin.getId(), newAdmin.getUsername(), null,
+                        newAdmin.getIme(), newAdmin.getPrezime(),
+                        newAdmin.getEmail(), newAdmin.getJmbg() ), HttpStatus.OK);
+    }
 }

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+    <button  [routerLink]="['/']" aria-label="Example icon button with a home icon">
+      <mat-icon>Home</mat-icon>
+    </button>
+  
+    <button mat-button  [matMenuTriggerFor]="menu"><mat-icon>Menu</mat-icon></button>
+    <mat-menu #menu="matMenu"> 
+      <button mat-menu-item [routerLink]="['/drzave']"><mat-icon>library_books</mat-icon><i>Drzava</i></button>
+      <button mat-menu-item [routerLink]="['/naseljenaMesta']"><mat-icon>school</mat-icon><i>Naseljeno mesto</i></button>
+    </mat-menu>
+    
+
+  
+    <!-- <button id='desno' mat-button  mat-raised-button color="primary" [matMenuTriggerFor]="menuPrijava">Prijavi se</button> -->
+    <span class="example-spacer"></span>
+    <button mat-button  [matMenuTriggerFor]="menuPrijava"  class="user mt-2 d-flex align-items-right">
+      <img src="./assets/img/user.jpg" alt="user" class="user-image mr-1 p-2" /> User Name  	<mat-icon>power_settings_new</mat-icon></button>
+    <mat-menu #menuPrijava="matMenu">
+      <button mat-menu-item  [routerLink]="['/login']"><mat-icon>add_circle</mat-icon>Login</button>
+      <button mat-menu-item *ngIf="loginService.validateRoles(['ROLE_ADMIN', 'ROLE_NASTAVNIK'])"  [routerLink]="['/register']"><mat-icon>create</mat-icon>Sign in</button>
+      <button mat-menu-item style="color: red;" *ngIf="loginService.user" (click)="loginService.logout()" [routerLink]="['/login']"><mat-icon>exit_to_app</mat-icon>Logout</button>
+    </mat-menu>
+  </mat-toolbar>
+  
+  
