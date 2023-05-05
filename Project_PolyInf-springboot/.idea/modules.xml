@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Project_PolyInf-springboot.iml" filepath="$PROJECT_DIR$/.idea/Project_PolyInf-springboot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/project_polyinf/project_polyinf.iml" filepath="$PROJECT_DIR$/project_polyinf/project_polyinf.iml" />
-    </modules>
-  </component>
-</project>
