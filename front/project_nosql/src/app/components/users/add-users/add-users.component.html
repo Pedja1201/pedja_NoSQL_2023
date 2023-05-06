@@ -1,0 +1,45 @@
+<div class = 'card p-3 bg-light'>
+    <form (submit)="createUser(user)" ngNativeValidate>
+      <h2 style="text-align: center;"><i>Add User</i></h2>
+      <div class=" col-sm-6">
+        <label class="form-label">Username: </label>
+        <input name="username" [(ngModel)]="user.username" class="form-control" type="text" placeholder="username" required>
+        <div *ngIf="errorMessage != ''" class="alert-message w-100 m-2">
+          <div class="alert-message-row w-100 m-2">
+            {{errorMessage}}
+          </div>
+        </div>
+      </div>
+  
+      <div class=" col-sm-6">
+        <label class="form-label">Password: </label>
+        <input name="password" [(ngModel)]="user.password" class="form-control" type="password" placeholder="password" required>
+      </div>
+  
+  
+      <div class=" col-sm-6">
+        <label class="form-label">First name: </label>
+        <input name="ime" [(ngModel)]="user.ime" class="form-control" type="text" placeholder="Enter First name" required>
+      </div>
+      
+      <div class=" col-sm-6">
+        <label class="form-label">Last name: </label>
+        <input name="prezime" [(ngModel)]="user.prezime" class="form-control" type="text" placeholder="Enter Last name" required>
+      </div>
+
+      <div class=" col-sm-6">
+        <label class="form-label">Email: </label>
+        <input name="email" [(ngModel)]="user.email" class="form-control" type="email" placeholder="Enter email" required>
+      </div>
+
+      <div class=" col-sm-6">
+        <label class="form-label">JMBG: </label>
+        <input name="jmbg" [(ngModel)]="user.jmbg" class="form-control" type="text" placeholder="Enter jmbg" required>
+      </div>
+      
+      <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button (click) = "goBackUsers()" type="submit" class="btn btn-secondary m-2">Cancel</button>
+      </div>
+    </form>
+  </div>

@@ -17,7 +17,7 @@ export class UsersService {
       return this.client.get<User[]>(`${this.baseUrl}/users`)
     }
   
-    getOne(id : number){
+    getOne(id : string){
       return this.client.get<User[]>(`${this.baseUrl}/users/${id}`)
     }
   
@@ -25,11 +25,11 @@ export class UsersService {
       return this.client.post(`${this.baseUrl}/users`, user)
     }
   
-    update(id:number, user : User){
-      return this.client.put<User[]>(`${this.baseUrl}/users/${id}`, user)
+    update(user : User){
+      return this.client.put<User[]>(`${this.baseUrl}/users/`, user)
     }
   
-    delete(id:number){
+    delete(id:User){
       return this.client.delete<User[]>(`${this.baseUrl}/users/${id}`)
     }
 }

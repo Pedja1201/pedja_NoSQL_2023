@@ -1,0 +1,58 @@
+{
+  "permissions": {
+    "/users": [
+      "ROLE_ADMIN",
+      "ROLE_USER"
+    ]
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "korisnik",
+      "password": "korisnik",
+      "roles": [
+        "ROLE_USER"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin",
+      "roles": [
+        "ROLE_ADMIN"
+      ]
+    }
+  ],
+  "drzave": [
+    {
+      "id": 1,
+      "oznaka": "SRB",
+      "naziv": "Srbija"
+    },
+    {
+      "id": 2,
+      "oznaka": "D",
+      "naziv": "Nemacka"
+    },
+    {
+      "id": 3,
+      "oznaka": "BiH",
+      "naziv": "Bosna i Hercegovina"
+    }
+  ],
+
+
+
+  "naseljenaMesta": [
+    {
+      "id": 1,
+      "naziv": "2021-05-25",
+      "drzava": {
+        "id": 1,
+        "oznaka": "SRB",
+        "naziv": "Srbija"
+      }
+    }
+    
+  ]
+}

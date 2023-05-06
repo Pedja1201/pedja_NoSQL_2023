@@ -1,69 +1,45 @@
 import { Injectable } from '@angular/core';
 import { Admin } from '../model/admin';
 import { User } from '../model/user';
-import { HttpClient } from '@angular/common/http';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { BehaviorSubject, tap } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {  Observable, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Token } from '../model/token';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private baseUrl = environment.baseUrl //Dobavljanje url adrese da ne kucamo rucno
+  private baseUrl = environment.baseUrl
+  token : Token = new Token()
+  user : User = new User()
 
-  token : null | string = null;
-  user : any = null;
-  rolesSubject: BehaviorSubject<Set<string>> = new BehaviorSubject<Set<string>>(new Set([]));
-  loggedOut = false;  //Ispis da je uspesno izlogovan
-  loggedIn = false;  //Za prikaz dugmica nakkon Login-a
+  isLoggedIn(){
+    if (localStorage.getItem('Token')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
-  constructor(private client : HttpClient, public snackBar : MatSnackBar) { }
+  constructor(private client : HttpClient, private router : Router) { }
 
   login(user:User){
-    return this.client.post<Token>(`${this.baseUrl}/login`, user).pipe(
-      tap(token => {
-        this.token = token.token;
-        this.user = JSON.parse(atob(token.token.split(".")[1]));
-        console.log(this.user)
-        this.loggedIn=true; //Za prikaz dugmica nakon Login-a
+    const headers=new HttpHeaders({'Access-Control-Allow-Origin':'*'});
+    return this.client.post<User>(`${this.baseUrl}/login`, user,{headers:headers}).pipe(
+      map(user => {
+        localStorage.setItem('Token', JSON.stringify(user));
       })
     );
   }
 
-
-  registerAdmin(admin:Admin){
-    return this.client.post<Token>(`${this.baseUrl}/registerAdmin`, admin).pipe(
-      tap(token => {
-        this.token = token.token;
-        this.user = JSON.parse(atob(token.token.split(".")[1]));
-        this.loggedIn=true; //Za prikaz dugmica nakon Login-a
-      })
-    );
+  signupUser(user:User) : Observable<string>{ 
+    return this.client.post<string>(`${this.baseUrl}/signup`, user)
   }
 
-  logout(): void {
-    this.token = null;
-    this.user = null;
-    this.rolesSubject.next(new Set<string>([]));
-    this.loggedOut = true; //Ispis da je uspesno izlogovan
-    this.loggedIn=false; //Za sklanjanje dugmica nakon logout-a
-    let snackBarRef = this.snackBar.open('Successfully logged out!', 'Confrim', {duration: 3000 });
+  logout() {
+    localStorage.removeItem("Token");
+    this.router.navigate(['/login'])
   }
-
-  //Za proveru prava pristupa rutiranja
-  validateRoles(roles: any): boolean {   //roles:string[] je bio
-    if (this.user) {
-      // @ts-ignore
-      const userRoles = new Set(this.user.roles);
-      for (const r of roles) {
-        if (userRoles.has(r)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
 }

@@ -1,0 +1,8 @@
+<mat-list>
+    <mat-list-item>ID: {{naselje["id"]}}</mat-list-item>
+    <mat-list-item>Naziv: {{naselje["naziv"]}}</mat-list-item>
+    <mat-list-item>Drzava: <span *ngIf="naselje['drzava']">{{naselje["drzava"]["oznaka"]}}</span></mat-list-item>
+
+
+</mat-list>
+<button mat-raised-button color="primary" (click)="back()">Nazad</button>

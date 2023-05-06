@@ -1,27 +1,37 @@
-<div class="slika">
-  <p>Ulogovan: {{loginService.validateRoles(['ROLE_ADMIN', 'ROLE_USER'])}}</p>
+<div class="position">
+  <form (ngSubmit)="login()" [formGroup]="loginForma" class="container" ngNativeValidate>
 
+    <h2>Login Page</h2>
 
-<form (ngSubmit)="login()" [formGroup]="loginForma" class="container" ngNativeValidate>
-  <h2>{{title}}</h2>
     <div>
       <mat-form-field appearance="outline">
-        <mat-label> <mat-icon>account_circle</mat-icon>Username</mat-label>
-        <input matInput name="username" formControlName="username" type="text" required>
+        <mat-label> Username</mat-label>
+        <input matInput name="username" formControlName="username" type="text" placeholder="Username" >
       </mat-form-field>
     </div>
     <div>
       <mat-form-field appearance="outline">
-        <mat-label><mat-icon>lock</mat-icon>Password</mat-label>
-        <input matInput name="password" formControlName="password" type="password" required>
+        <mat-label>Password</mat-label>
+        <input matInput name="password" formControlName="password" type="password" placeholder="Password">
       </mat-form-field>
     </div>
+
     <div>
-      <button type="submit" mat-raised-button class="login"><mat-icon>done_all</mat-icon>Login</button>
-      <button *ngIf="loginService.user" (click)="loginService.logout()"  mat-raised-button color="warn"><mat-icon>exit_to_app</mat-icon>Logout</button>
+      <button type="submit" mat-raised-button class="login">Login</button>
+      <button *ngIf="loginService.user" (click)="loginService.logout()"  mat-raised-button color="warn">Logout</button>
     </div>
-    <p *ngIf="loginFailed"><mat-icon>error</mat-icon>Login failed!</p>
-    <p *ngIf="loginService.loggedOut"><mat-icon>warning</mat-icon>Successfully logged out!</p>
+
+    <div class="form-check d-flex justify-content-left mb-5">
+      <label class="form-check-label" for="form2Example3">
+        Don't have an account? <a href="#!" [routerLink]="['/signup']">Register</a>
+      </label>
+    </div>
+
+    <div *ngIf="errorMessage != ''" class="alert-message">
+      <div class="alert-message-row">
+        {{errorMessage}}
+      </div>
+    </div>
   </form>
 
 </div>
