@@ -2,7 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from crud_actions_component.crud_actions_viewer import CRUDActionsViewer
 
 from gui.controller.main_window_controller import MainWindowController
+from reference_tables_component.ref_tables_viewer import RefTablesViewer
 
+                #TODO:U ovoj klasi resiti problem Layout-a!!!!
 class MainWindowViewer(object):  #Stigao sam do RefTables component
     def __init__(self):
         self.main_window_controller = MainWindowController()
@@ -115,10 +117,10 @@ class MainWindowViewer(object):  #Stigao sam do RefTables component
         self.refLabel.setGeometry(QtCore.QRect(10, 570, 150, 25))
         self.refLabel.setVisible(False)
 
-        # self.refTablesViewer = RefTablesViewer(self.centralwidget)
-        # self.refTablesViewer.setGeometry(QtCore.QRect(5, 585, 865, 380))
-        # self.refTablesViewer.setContentsMargins(0, 0, 0, 0)
-        # self.refTablesViewer.setVisible(False)
+        self.refTablesViewer = RefTablesViewer(self.centralwidget)
+        self.refTablesViewer.setGeometry(QtCore.QRect(5, 585, 865, 380))
+        self.refTablesViewer.setContentsMargins(0, 0, 0, 0)
+        self.refTablesViewer.setVisible(False)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -155,6 +157,7 @@ class MainWindowViewer(object):  #Stigao sam do RefTables component
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "PolyInf"))
+        MainWindow.setWindowIcon(QtGui.QIcon("resources/icons/singi.jpg"))
 
         self.connectMySQLDBPushButton.setText(_translate("MainWindow", "Connect Database"))
         self.connectmongoDBPushButton.setText(_translate("MainWindow", "Connect Mongo"))

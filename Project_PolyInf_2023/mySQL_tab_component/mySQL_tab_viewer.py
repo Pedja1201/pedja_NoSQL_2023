@@ -4,7 +4,7 @@ from PyQt5 import QtCore
 from utils.mysql_utils import MySQLUtils
 from mySQL_tab_component.mySQL_tab_controller import MySQLTabController
 
-
+            #TODO:U ovoj klasi resiti problem Layout-a!!!!
 class MySQLTabViewer(QtWidgets.QWidget):
     def __init__(self, database_name, table_name, statusBar, CRUDActionsViewer, parent=None):
         super().__init__(parent=parent)

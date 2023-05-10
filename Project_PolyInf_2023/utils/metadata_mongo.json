@@ -1,6 +1,6 @@
 [
     {
-        "database_name":"proizvodi",
-        "tables": ["artikal 1"]
+        "database_name":"upravljanje_projektom",
+        "tables": ["drzava"]
     }
 ]

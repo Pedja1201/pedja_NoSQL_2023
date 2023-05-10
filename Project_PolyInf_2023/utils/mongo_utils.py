@@ -20,11 +20,11 @@ class MongoUtils:
 
                 try: 
                     self.mydb = pymongo.MongoClient(
-                        "mongodb://" + load_config(config_filepath)["host"]
+                        "mongodb://" + load_config(config_filepath)['host']
                     )
                     statusBar.showMessage("Connection made!")
                     print("Connection made!")
-                    #print(self.mydb.list_database_names)
+                    print(self.mydb.list_database_names)
                 except Exception as e:
                     print(e)
                     statusBar.showMessage("Error In Connection")  

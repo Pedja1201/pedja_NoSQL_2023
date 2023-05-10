@@ -40,7 +40,6 @@ class CRUDActionsViewer(QtWidgets.QWidget):
         self.getAllPushButton.setText(_translate("CRUDActionsViewer", "Get All"))
         self.searchPushButton.setText(_translate("CRUDActionsViewer", "Search"))
 
-
     def set_tab_controller(self, tab_controller):
         print("tab kontroler: ", tab_controller)
         if tab_controller != None:
@@ -52,7 +51,7 @@ class CRUDActionsViewer(QtWidgets.QWidget):
             print("disconnecting actions")
             self.tab_controller = None
             self.disconnect_actions()
-    
+
     def set_connections(self, database_type):
         if self.once_connected == True:
             print("disconnecting first")
@@ -70,7 +69,7 @@ class CRUDActionsViewer(QtWidgets.QWidget):
             pass
         elif database_type == "arango":
             pass
-    
+
     def no_tab_controller_set(self):
         print("no controller set")
 

@@ -20,9 +20,16 @@ class MySQLUtils:
 
                 try: 
                     self.mydb = mysql.connector.connect(
-                        host=config_json["localhost"],
-                        user=config_json["user"],
-                        password=config_json["pedja10"]
+                        host="localhost",
+                        port=3306,
+                        user="root",
+                        password="pedja10",
+                        db="upravljanje_projektom"
+                        # hostname=config_json["localhost"],
+                        # port=3306,
+                        # username=config_json["root"],
+                        # password=config_json["pedja10"],
+                        # database=config_json['upravljanje_projektom']
                     )
                     self.mycursor = self.mydb.cursor()
                     statusBar.showMessage("Connection made!")
@@ -120,7 +127,7 @@ class MySQLUtils:
                 msg.exec_()
 
         def delete_row(self, database_name, collection_name, row_id):
-            contained_data = load_config("config files\mysql_contained_data.json")
+            contained_data = load_config("config_files/mysql_contained_data.json")
             print(collection_name in contained_data)
             if collection_name not in contained_data:
                 try:

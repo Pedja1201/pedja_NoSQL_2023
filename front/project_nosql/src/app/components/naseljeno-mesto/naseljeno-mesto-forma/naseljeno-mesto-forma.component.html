@@ -8,7 +8,7 @@
     </div>
       <div>
         <mat-form-field appearance="outline">
-          <mat-select placeholder="Drzaba-oznaka" name="drzava" formControlName="drzava" [compareWith]="comparator">
+          <mat-select placeholder="Drzava-oznaka" name="drzava" formControlName="drzava" [compareWith]="comparator">
             <mat-option *ngFor="let drzava of drzave"  [value]="drzava">
               {{drzava.oznaka}}
             </mat-option>

@@ -4,6 +4,7 @@ from PyQt5 import QtCore
 from utils.mongo_utils import MongoUtils
 from mongoDB_component.mongoDB_controller import MongoController
 
+                #TODO:U ovoj klasi resiti problem Layout-a!!!!
 class MongoTabViewer(QtWidgets.QWidget):
     def __init__(self, database_name, table_name, statusBar, parent=None):
         super().__init__(parent=parent)

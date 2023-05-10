@@ -1,23 +1,19 @@
 package org.project.app.controller;
 
 import org.project.app.dto.DrzavaDTO;
-import org.project.app.dto.NaseljenoMestoDTO;
 import org.project.app.model.Drzava;
-import org.project.app.model.NaseljenoMesto;
 import org.project.app.service.DrzavaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Optional;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path = "/api/drzave")
 public class DrzavaController {
     @Autowired

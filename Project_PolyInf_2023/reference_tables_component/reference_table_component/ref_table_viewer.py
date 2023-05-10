@@ -4,7 +4,7 @@ from PyQt5 import QtCore
 from utils.mysql_utils import MySQLUtils
 from reference_tables_component.reference_table_component.ref_table_controller import RefTableController
 
-
+                #TODO:U ovoj klasi resiti problem Layout-a!!!!
 class RefTableViewer(QtWidgets.QWidget):
     def __init__(self, database_name, table_name, statusBar, main_window_controller, CRUDActionsViewer, parent=None):
         super().__init__(parent=parent)

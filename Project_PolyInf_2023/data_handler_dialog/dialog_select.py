@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets, QtCore
-from utils.mysql_utils import MySQLUtils
+
 from data_handler_dialog import message_box
+from utils.mysql_utils import MySQLUtils
 from data_handler_dialog.table_reference_spec import load_spec
 
 
