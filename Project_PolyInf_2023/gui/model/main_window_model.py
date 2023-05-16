@@ -7,12 +7,14 @@ from mySQL_tab_component.mySQL_tab_viewer import MySQLTabViewer
 from utils.mysql_utils import MySQLUtils
 from utils.mongo_utils import MongoUtils
 from utils.load_config import load_config
+from utils.arango_utils import ArangoUtils
 
 class MainWindowModel:
     def __init__(self):
         self.mySQL_utils = MySQLUtils()
         self.mongo_utils = MongoUtils()
-    
+        self.arango_utils = ArangoUtils()
+
     def load_and_connect_mysql_db(self, mySQLTreeWidget, statusBar):
         self.mySQL_utils.load_and_connect_db(statusBar)
 
@@ -200,4 +202,30 @@ class MainWindowModel:
     # def delete_row(self, databaseDataTableWidget, database_name, collection_name):
     #     row_id = databaseDataTableWidget
     #     self.mySQL_utils.delete_row(database_name, collection_name, )
-    
+
+
+    #Arango load and connect database
+    def load_and_connect_arangodb(self, arangoDBTreeWidget, statusBar):
+        self.arango_utils.load_and_connect_db(statusBar)
+
+        self.fill_arango_tree(arangoDBTreeWidget)
+
+    #Arango - fill tree view with elements
+
+    def fill_arango_tree(self, arangoDBTreeWidget):
+        arangoDBTreeWidget.clear()
+
+        databases = self.arango_utils.get_all_databases()
+        if databases == None:
+            return
+        else:
+            for database_name in databases:
+                arango_database_item = QTreeWidgetItem(arangoDBTreeWidget)
+                arango_database_item.setText(0, database_name)
+                arango_db_collections = self.arango_utils.get_all_tables(database_name)
+                collections = self.arango_utils.get_all_tables(database_name)
+
+                for collection in collections:
+                    collection_item = QTreeWidgetItem(arango_database_item)
+                    collection_item.setText(0, collection)
+                    

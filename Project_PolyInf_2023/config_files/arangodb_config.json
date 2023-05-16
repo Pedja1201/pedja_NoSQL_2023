@@ -1,0 +1,7 @@
+{
+    
+        "username": "root",
+        "password": "password",
+        "arangoURL": "http://localhost:8529"
+    
+}

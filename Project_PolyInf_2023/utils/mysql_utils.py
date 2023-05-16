@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QMessageBox
 from utils.load_config import load_config
 from utils.datatypes import sql_to_python
 
+
 class MySQLUtils:
     class __MySQLUtils:
         def __init__(self):
@@ -18,12 +19,13 @@ class MySQLUtils:
                 config_filepath = filenames[0]
                 config_json = load_config(config_filepath)
 
-                try: 
+                try:
                     self.mydb = mysql.connector.connect(
                         host="localhost",
                         port=3306,
                         user="root",
-                        password="pedja10",
+                        # password="root",
+                        password='pedja10', #Pedja
                         db="upravljanje_projektom"
                         # hostname=config_json["localhost"],
                         # port=3306,
@@ -36,8 +38,8 @@ class MySQLUtils:
                     print("Connection made!")
                 except Exception as e:
                     print(e)
-                    statusBar.showMessage("Error In Connection")                
-        
+                    statusBar.showMessage("Error In Connection")
+
         def create_database(self, new_database_name, statusBar):
             try:
                 sql = "CREATE DATABASE IF NOT EXISTS %s" % new_database_name
@@ -127,15 +129,18 @@ class MySQLUtils:
                 msg.exec_()
 
         def delete_row(self, database_name, collection_name, row_id):
-            contained_data = load_config("config_files/mysql_contained_data.json")
+            contained_data = load_config(
+                "config_files/mysql_contained_data.json")
             print(collection_name in contained_data)
             if collection_name not in contained_data:
                 try:
-                    column_id_name = self.get_table_columns(database_name, collection_name)[0][0]
+                    column_id_name = self.get_table_columns(
+                        database_name, collection_name)[0][0]
                     # print(column_id_name)
                     sql = "USE %s" % database_name
                     self.mycursor.execute(sql)
-                    sql = "DELETE FROM %s WHERE %s = %s" % (collection_name, column_id_name, row_id)
+                    sql = "DELETE FROM %s WHERE %s = %s" % (
+                        collection_name, column_id_name, row_id)
                     self.mycursor.execute(sql)
                     self.mydb.commit()
                     return True
@@ -151,7 +156,8 @@ class MySQLUtils:
             else:
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
-                text = ("Deleting failed, collections: "+', '.join(['%s']*len(contained_data[collection_name]))+" reference this data.") % tuple(contained_data[collection_name])
+                text = ("Deleting failed, collections: "+', '.join(['%s']*len(
+                    contained_data[collection_name]))+" reference this data.") % tuple(contained_data[collection_name])
                 msg.setText(text)
                 msg.setWindowTitle("Info")
                 msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
@@ -174,13 +180,14 @@ class MySQLUtils:
                 msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
                 msg.exec_()
             return False
-        
+
         def insert(self, database_name, table_name, columns, values, statusBar):
             # id je neophodno staviti ako id nije autoinkrement
             try:
                 sql = "USE %s" % database_name
                 self.mycursor.execute(sql)
-                sql = "INSERT INTO " + table_name + "("  # (name, address) VALUES (%s, %s)"
+                # (name, address) VALUES (%s, %s)"
+                sql = "INSERT INTO " + table_name + "("
                 first = False
                 for index, column in enumerate(columns):
                     if values[index].strip() == "":
@@ -200,7 +207,8 @@ class MySQLUtils:
                     first = True
                 sql += ")"
                 values = tuple([v for v in values if v != ""])
-                types = [column for column in self.get_table_columns(database_name, table_name)]
+                types = [column for column in self.get_table_columns(
+                    database_name, table_name)]
                 values = sql_to_python(values, types)
                 # print(sql)
                 self.mycursor.execute(sql, values)
@@ -228,7 +236,8 @@ class MySQLUtils:
                     sql += column + " = " + "%s"
                     sql_values.append(str(new_values[index]))
                 sql += " WHERE "
-                columns_data = [column for column in self.get_table_columns(database_name, table_name)]
+                columns_data = [column for column in self.get_table_columns(
+                    database_name, table_name)]
                 first = False
                 for index, column in enumerate(columns_data):
                     if column[3] == "PRI":
@@ -287,14 +296,14 @@ class MySQLUtils:
                 msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
                 msg.exec_()
                 return False
-        
 
-            
     instance = None
+
     def __init__(self):
         if not MySQLUtils.instance:
             MySQLUtils.instance = MySQLUtils.__MySQLUtils()
         else:
             pass
+
     def __getattr__(self, name):
         return getattr(self.instance, name)

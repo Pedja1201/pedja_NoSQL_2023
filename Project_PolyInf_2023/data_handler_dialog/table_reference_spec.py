@@ -1,7 +1,7 @@
 import json
 
 
-def load_spec(path="config_files/mysql_table_reference_spec.json"):
+def load_spec(path="config_files/mysql_table_reference_spec_upravljanje_projektom.json"):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
     # return {
