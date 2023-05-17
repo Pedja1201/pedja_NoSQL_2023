@@ -1,137 +1,87 @@
 {
-  "tim": {
-    "ref": {
-      "projekat_id": ["projekat", "projekat_id"]
-    },
-    "id_col": "tim_id"
-  },
-  "projekat": {
-    "ref": {
-      "kompanija_id": ["kompanija", "kompanija_id"]
-    },
-    "id_col": "projekat_id"
-  },
-  "sastav_projekta": {
-    "ref": {
-      "projekat_id": ["projekat", "projekat_id"],
-      "pod_projekat_id": ["projekat", "projekat_id"]
-    },
-    "id_col": ""
-  },
-  "etapa_projekta": {
-    "ref": {
-      "projekat_id": ["projekat", "projekat_id"]
-    },
-    "id_col": "etapa_projekta_id"
-  },
-  "sprint_plan": {
-    "ref": {
-      "etapa_projekta_id": ["etapa_projekta", "etapa_projekta_id"]
-    },
-    "id_col": "sprint_id"
-  },
-  "sprint_realizacija": {
-    "ref": {
-      "sprint_plan_id": ["sprint_plan", "sprint_id"]
-    },
-    "id_col": ""
-  },
-  "task_u_etapi": {
-    "ref": {
-      "etapa_projekta_id": ["etapa_projekta", "etapa_projekta_id"],
-      "task_id": ["task", "task_id"]
-    },
-    "id_col": ""
-  },
-  "task_u_sprintu": {
-    "ref": {
-      "task_id": ["task", "task_id"],
-      "sprint_plan_id": ["sprint_plan", "sprint_id"]
-    },
-    "id_col": "task_u_sprintu_id"
-  },
-  "task_realizacija": {
-    "ref": {
-      "task_u_sprintu_id": ["task_u_sprintu", "task_u_sprintu_id"]
-    },
-    "id_col": ""
-  },
-  "kompanija": {
-    "ref": {
-      "naseljeno_mesto_id": ["naseljeno_mesto", "naseljeno_mesto_id"]
-    },
-    "id_col": "kompanija_id"
+  "drzava": {
+    "ref": {},
+    "id_col": "DR_OZNAKA"
   },
   "naseljeno_mesto": {
     "ref": {
-      "drzava_id": ["drzava", "drzava_id"]
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"]
     },
-    "id_col": "naseljeno_mesto_id"
+    "id_col": "NM_ID"
   },
-  "ljudski_resursi": {
+  "organizacione_jedinice": {
     "ref": {
-      "naseljeno_mesto_id": ["naseljeno_mesto", "naseljeno_mesto_id"]
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "PS_ID": ["poslovni_subjekt", "PS_ID"]
     },
-    "id_col": "covek_id"
+    "id_col": "OJ_ID"
   },
-  "zaposleni": {
+  "podrzane_u": {
     "ref": {
-      "covek_id": ["ljudski_resursi", "covek_id"],
-      "kompanija_id": ["kompanija", "kompanija_id"]
+      "REG_POS_DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "REG_PS_ID": ["poslovni_subjekt", "PS_ID"],
+      "REG_DEL_ID": ["registar_delatnosti", "DEL_ID"],
+      "REG_REGZ_DATUM": ["registrovan_za_delatnosti", "REGZ_DATUM"],
+      "OJ_ID": ["organizacione_jedinice", "OJ_ID"]
     },
-    "id_col": "zaposleni_id"
+    "id_col": "UOJ_ID"
   },
-  "freelancer": {
+  "poslovni_partneri": {
     "ref": {
-      "covek_id": ["ljudski_resursi", "covek_id"]
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "PS_ID": ["poslovni_subjekt", "PS_ID"],
+      "POS_DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "POS_PS_ID": ["poslovni_subjekt", "PS_ID"],
+      "VP_ID": ["vrsta_partnerstva", "VP_ID"]
     },
-    "id_col": "freelancer_id"
+    "id_col": "PART_OD"
   },
-  "clan_tima": {
+  "poslovni_subjekt": {
     "ref": {
-      "zaposleni_id": ["zaposleni", "zaposleni_id"],
-      "tim_id": ["tim", "tim_id"],
-      "freelancer_id": ["freelancer", "freelancer_id"]
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"]
     },
-    "id_col": "clan_tima_id"
+    "id_col": "PS_ID"
   },
-  "vestine_coveka": {
+  "radna_mesta": {
     "ref": {
-      "vestina_id": ["vestina", "vestina_id"],
-      "nivo_vestine_id": ["nivo_vestina", "nivo_vestine_id"],
-      "covek_id": ["ljudski_resursi", "covek_id"]
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "PS_ID": ["poslovni_subjekt", "PS_ID"]
     },
-    "id_col": "vestine_coveka_id"
+    "id_col": "RM_ID"
   },
-  "clan_tima_ima_aktivnost": {
+  "raspored_po_jedinicama": {
     "ref": {
-      "clan_tima_id": ["clan_tima", "clan_tima_id"],
-      "task_u_sprintu_id": ["task_u_sprintu", "task_u_sprintu_id"]
+      "RAD_DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "PS_ID": ["poslovni_subjekt", "PS_ID"],
+      "RM_ID": ["radna_mesta", "RM_ID"],
+      "OJ_ID": ["organizacione_jedinice", "OJ_ID"]
     },
-    "id_col": ""
+    "id_col": "OJ_NORM"
   },
-  "partner_na_projektu": {
+  "registar_delatnosti": {
     "ref": {
-      "projekat_id": ["projekat", "projekat_id"],
-      "projekat_vlasnik_kompanija_id": ["projekat", "kompanija_id"],
-      "partner_kompanija_id": ["kompanija", "kompanija_id"]
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"]
     },
-    "id_col": ""
+    "id_col": "DEL_ID"
   },
-  "drzava": {
+  "registrovan_za_delatnosti": {
+    "ref": {
+      "POS_DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "PS_ID": ["poslovni_subjekt", "PS_ID"],
+      "DEL_ID": ["registar_delatnosti", "DEL_ID"]
+    },
+    "id_col": "REGZ_DATUM"
+  },
+  "unutrasnje_organizacija": {
+    "ref": {
+      "DR_OZNAKA": ["drzava", "DR_OZNAKA"],
+      "PS_ID": ["poslovni_subjekt", "PS_ID"],
+      "ORG_OJ_ID": ["organizacione_jedinice", "OJ_ID"]
+    },
+    "id_col": "SLJ_BR"
+  },
+  "vrsta_partnerstva": {
     "ref": {},
-    "id_col": "drzava_id"
-  },
-  "vestina": {
-    "ref": {},
-    "id_col": "vestina_id"
-  },
-  "nivo_vestina": {
-    "ref": {},
-    "id_col": "nivo_vestine_id"
-  },
-  "task": {
-    "ref": {},
-    "id_col": "task_id"
+    "id_col": "VP_ID"
   }
 }
