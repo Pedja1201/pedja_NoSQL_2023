@@ -131,6 +131,19 @@ class MainWindowController:
     def load_and_connect_arangodb(self, arangoDBTreeWidget, statusBar):
         self.main_window_model.load_and_connect_arangodb(arangoDBTreeWidget, statusBar)
 
+
+    def add_arango_table_tab(self, treeItem, column, dataTabWidget, statusBar, CRUDActionsViewer):
+        table_name = treeItem.text(column)
+        # provera da li je kliknuta tabela ili baza
+        if treeItem.parent() != None:
+            database_name = treeItem.parent().text(column)
+            self.main_window_model.add_arango_table_tab(
+                database_name, table_name, dataTabWidget, statusBar, CRUDActionsViewer)
+
+
+    def close_tab(self, tab_index, dataTabWidget):
+        dataTabWidget.removeTab(tab_index)
+
     # za sve
 
     def change_tab_controller_for_CRUDActionViewer(self, tab_index, dataTabWidget, CRUDActionsViewer):

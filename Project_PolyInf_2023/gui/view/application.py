@@ -4,6 +4,7 @@ from crud_actions_component.crud_actions_viewer import CRUDActionsViewer
 from gui.controller.main_window_controller import MainWindowController
 from reference_tables_component.ref_tables_viewer import RefTablesViewer
 
+
 # TODO:U ovoj klasi resiti problem Layout-a!!!!
 
 
@@ -220,15 +221,23 @@ class MainWindowViewer(object):  # Stigao sam do RefTables component
         self.mongoDBTreeWidget.itemDoubleClicked.connect(
             lambda y, x: self.main_window_controller.add_mongo_table_tab(y, x, self.nosqlTabWidget, self.statusbar))
 
-        #Arango connections and actions on databases
+        # Arango connections and actions on databases
         self.connectarangoDBPushButton.clicked.connect(
             lambda x: self.main_window_controller.load_and_connect_arangodb(self.arangoDBTreeWidget, self.statusbar))
 
+        self.arangoDBTreeWidget.itemDoubleClicked.connect(lambda y, x: self.main_window_controller.add_arango_table_tab(
+            y, x, self.nosqlTabWidget, self.statusbar, self.CRUDActionsViewer))
+
+        self.nosqlTabWidget.tabCloseRequested.connect(
+            lambda x: self.main_window_controller.close_tab(x, self.nosqlTabWidget))
+
         # Za sve
-        self.dataTabWidget.currentChanged.connect(lambda x: self.main_window_controller.change_tab_controller_for_CRUDActionViewer(
-            x, self.dataTabWidget, self.CRUDActionsViewer))
+        self.dataTabWidget.currentChanged.connect(
+            lambda x: self.main_window_controller.change_tab_controller_for_CRUDActionViewer(
+                x, self.dataTabWidget, self.CRUDActionsViewer))
         self.dataTabWidget.currentChanged.connect(lambda x: self.main_window_controller.show_mysql_ref_tables(
-            x, self.dataTabWidget, self.refTablesViewer, self.refLabel, MainWindow, self.statusbar, self.CRUDActionsViewer))
+            x, self.dataTabWidget, self.refTablesViewer, self.refLabel, MainWindow, self.statusbar,
+            self.CRUDActionsViewer))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
