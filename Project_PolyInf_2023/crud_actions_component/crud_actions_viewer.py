@@ -65,8 +65,14 @@ class CRUDActionsViewer(QtWidgets.QWidget):
             self.updatePushButton.clicked.connect(lambda y: self.tab_controller.show_data_handler_dialog("update"))
             self.searchPushButton.clicked.connect(lambda y: self.tab_controller.show_data_handler_dialog("search"))
             self.once_connected = True
-        elif database_type == "mongo":
-            pass
+        elif database_type == "mongo":  #Potrebno za prikaz monga
+            print("connecting for mongo")
+            self.getAllPushButton.clicked.connect(lambda y: self.tab_controller.load_table_data())
+            self.deletePushButton.clicked.connect(lambda y: self.tab_controller.delete_row())
+            self.insertPushButton.clicked.connect(lambda y: self.tab_controller.show_data_handler_dialog("insert"))
+            self.updatePushButton.clicked.connect(lambda y: self.tab_controller.show_data_handler_dialog("update"))
+            self.searchPushButton.clicked.connect(lambda y: self.tab_controller.show_data_handler_dialog("search"))
+            self.once_connected = True
         elif database_type == "arango":
             pass
 

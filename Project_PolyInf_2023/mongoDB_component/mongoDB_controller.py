@@ -5,6 +5,7 @@ from utils.mongo_utils import MongoUtils
 
 class MongoController:
     def __init__(self):
+        self.for_database_type = "mongo"
         self.mongo_tab_model = MongoTabModel()
         self.mongo_utils = MongoUtils()
     
@@ -19,3 +20,6 @@ class MongoController:
 
     def update(self, database_name, table_name, dataTableWidget, statusBar):
         print("Uraditi update")
+
+    # def change_controller_for_CRUDActionViewer(self, CRUDActionsViewer):
+    #     CRUDActionsViewer.set_tab_controller(self)

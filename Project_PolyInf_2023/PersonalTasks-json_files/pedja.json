@@ -1,0 +1,83 @@
+{
+    "poslovni_subjekat": { //PS_ID
+        "id_vrednost": 1,
+        "polja_dokumenta": {
+            "naziv": "string",
+            "adresa": "string",
+            "www": "string"
+        },
+        "softverski_proizvod": {
+            "polje_poredjenja_u_detetu": [
+                "PS_ID"
+            ],
+            "tabela_polje_poredjenja_u_roditelju": {
+                "poslovni_subjekat": "PS_ID"
+            },
+            "polja_dokumenta": {
+                "naziv": "string",
+                "datum_katalogiziranja": "date",
+                "datum_obustavljanja": "date",
+                "planski_zavrsetak": "date",
+                "spr_status": "string"
+            }
+        },
+        "projekat_realizacije_softvera": {
+            "polje_poredjenja_u_detetu": [
+                "PS_ID",
+                "DR_OZNAKA",
+                "TIPP_ID",
+                "ID_PROCESA"
+            ],
+            "tabela_polje_poredjenja_u_roditelju": {
+                "poslovni_subjekat": "PS_ID",
+                "drzava": "DR_OZNAKA",
+                "tip_projekta": "TIPP_ID",
+                "softverski_proces": "ID_PROCESA"
+            },
+            "polja_dokumenta": {
+                "PROJ_NAZIV": "string",
+                "PROJ_DATPOKR": "date",
+                "PROJ_DATOKON": "date",
+                "PROJ_STVARNI_POCETAK": "date",
+                "PROJ_STVARNI_ZAVRSETAK": "date"
+            },
+            "tip_projekta": {
+                "polja_dokumenta": {
+                    "TIPP_NAZIV": "string"
+                }
+            },
+            "struktura_procesa": {
+                "polje_poredjenja_u_detetu": [
+                    "DR_OZNAKA",
+                    "PS_ID",
+                    "ID_PROCESA",
+                    "AKT_OZNAKA",
+                    "AKT_VERZIJA"
+                ],
+                "tabela_polje_poredjenja_u_roditelju": {
+                    "drzava": "DR_OZNAKA",
+                    "poslovni_subjekat": "PS_ID",
+                    "softverski_proces": "ID_PROCESA",
+                    "struktura_aktivnosti": [
+                        "AKT_OZNAKA",
+                        "AKT_VERZIJA"
+                    ]
+                },
+                "polja_dokumenta": {},
+                "softverski_proces": {
+                    "polje_poredjenja_u_detetu": [
+                        "DR_OZNAKA",
+                        "PS_ID"
+                    ],
+                    "tabela_polje_poredjenja_u_roditelju": {
+                        "drzava": "sprint_plan_id",
+                        "poslovni_subjekat": "sprint_plan_id"
+                    },
+                    "polja_dokumenta": {
+                        "PROC_NAZIV": "string"
+                    }
+                }
+            }
+        }
+    }
+}

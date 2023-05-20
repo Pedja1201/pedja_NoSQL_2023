@@ -218,7 +218,7 @@ class MainWindowViewer(object):  # Stigao sam do RefTables component
             self.newMongoNameLineEdit, self.mongoDBTreeWidget, self.statusbar))
 
         self.mongoDBTreeWidget.itemDoubleClicked.connect(
-            lambda y, x: self.main_window_controller.add_mongo_table_tab(y, x, self.dataTabWidget, self.statusbar))
+            lambda y, x: self.main_window_controller.add_mongo_table_tab(y, x, self.nosqlTabWidget, self.statusbar))
 
         #Arango connections and actions on databases
         self.connectarangoDBPushButton.clicked.connect(

@@ -12,7 +12,7 @@ class MongoTabViewer(QtWidgets.QWidget):
         self.database_name = database_name
         self.table_name = table_name
         self.statusBar = statusBar
-        self.mongo_controller = MongoController()
+        self.tab_controller = MongoController()
 
         self.setObjectName("mongoTabViewer")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self)
@@ -47,12 +47,12 @@ class MongoTabViewer(QtWidgets.QWidget):
 
         self.load_table_data()
 
-        self.deletePushButton.clicked.connect(lambda y: self.mongo_controller.delete_row(self.database_name, self.table_name, self.dataTableWidget))
-        self.insertPushButton.clicked.connect(lambda y: self.mongo_controller.insert(self.database_name, self.table_name, self.dataTableWidget, self.statusBar))
-        self.updatePushButton.clicked.connect(lambda y: self.mongo_controller.update(self.database_name, self.table_name, self.dataTableWidget, self.statusBar))
+        self.deletePushButton.clicked.connect(lambda y: self.tab_controller.delete_row(self.database_name, self.table_name, self.dataTableWidget))
+        self.insertPushButton.clicked.connect(lambda y: self.tab_controller.insert(self.database_name, self.table_name, self.dataTableWidget, self.statusBar))
+        self.updatePushButton.clicked.connect(lambda y: self.tab_controller.update(self.database_name, self.table_name, self.dataTableWidget, self.statusBar))
     
     def load_table_data(self):
-        self.mongo_controller.load_table_data(self.database_name, self.table_name, self.dataTableWidget)
+        self.tab_controller.load_table_data(self.database_name, self.table_name, self.dataTableWidget)
     
     def clicked(self):
         print("test test")
