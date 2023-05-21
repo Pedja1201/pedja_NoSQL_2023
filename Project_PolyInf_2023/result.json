@@ -1,0 +1,1716 @@
+{
+    "aktivnosti_u_etapi": [],
+    "domen_zahteva": [
+        {
+            "DZ_ID": 1,
+            "DZ_NAZIV": "Domen zahteva1",
+            "_id": "6469b723976d434aa956cc1d"
+        }
+    ],
+    "drzava": [
+        {
+            "DR_OZNAKA": "BiH",
+            "DR_NAZIV": "Bosna i Hercegovina",
+            "_id": "6469b724976d434aa956cc1e"
+        },
+        {
+            "DR_OZNAKA": "SRB",
+            "DR_NAZIV": "Srbija",
+            "_id": "6469b724976d434aa956cc1f"
+        }
+    ],
+    "etape_u_projektu": [],
+    "field_mapper": [
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "drzava",
+            "tabela_logicki_naziv": "Drzava",
+            "_id": "6469b724976d434aa956cc20"
+        },
+        {
+            "fizicki_naziv": "DR_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "drzava",
+            "tabela_logicki_naziv": "Drzava",
+            "_id": "6469b724976d434aa956cc21"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc22"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc23"
+        },
+        {
+            "fizicki_naziv": "PS_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc24"
+        },
+        {
+            "fizicki_naziv": "NM_ID",
+            "logicki_naziv": "Sediste",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc25"
+        },
+        {
+            "fizicki_naziv": "PS_ADRESA",
+            "logicki_naziv": "Adresa",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc26"
+        },
+        {
+            "fizicki_naziv": "PS_WWW",
+            "logicki_naziv": "www",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc27"
+        },
+        {
+            "fizicki_naziv": "POS_DR_OZNAKA",
+            "logicki_naziv": "Povezana_Drzava",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc28"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Povezana_Kompanija",
+            "tabela_fizicki_naziv": "poslovni_subjekt",
+            "tabela_logicki_naziv": "Poslovni subjekt",
+            "_id": "6469b724976d434aa956cc29"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc2a"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc2b"
+        },
+        {
+            "fizicki_naziv": "OJ_ID",
+            "logicki_naziv": "Organizaciona jedinica",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc2c"
+        },
+        {
+            "fizicki_naziv": "OJ_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc2d"
+        },
+        {
+            "fizicki_naziv": "OJ_ADRESA",
+            "logicki_naziv": "Adresa",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc2e"
+        },
+        {
+            "fizicki_naziv": "NAS_DR_OZNAKA",
+            "logicki_naziv": "Drzava sedista",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc2f"
+        },
+        {
+            "fizicki_naziv": "NM_ID",
+            "logicki_naziv": "Mesto sedista",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc30"
+        },
+        {
+            "fizicki_naziv": "OJ_PRAVNO",
+            "logicki_naziv": "Pravno lice",
+            "tabela_fizicki_naziv": "organizacione_jedinice",
+            "tabela_logicki_naziv": "Organizacione jedinice",
+            "_id": "6469b724976d434aa956cc31"
+        },
+        {
+            "fizicki_naziv": "VP_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "vrsta_partnerstva",
+            "tabela_logicki_naziv": "Vrste partnerstva",
+            "_id": "6469b724976d434aa956cc32"
+        },
+        {
+            "fizicki_naziv": "VP_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "vrsta_partnerstva",
+            "tabela_logicki_naziv": "Vrste partnerstva",
+            "_id": "6469b724976d434aa956cc33"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "radna_mesta",
+            "tabela_logicki_naziv": "Radna mesta",
+            "_id": "6469b724976d434aa956cc34"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "radna_mesta",
+            "tabela_logicki_naziv": "Radna mesta",
+            "_id": "6469b724976d434aa956cc35"
+        },
+        {
+            "fizicki_naziv": "RM_ID",
+            "logicki_naziv": "Radno mesto",
+            "tabela_fizicki_naziv": "radna_mesta",
+            "tabela_logicki_naziv": "Radna mesta",
+            "_id": "6469b724976d434aa956cc36"
+        },
+        {
+            "fizicki_naziv": "RM_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "radna_mesta",
+            "tabela_logicki_naziv": "Radna mesta",
+            "_id": "6469b724976d434aa956cc37"
+        },
+        {
+            "fizicki_naziv": "RM_NORM",
+            "logicki_naziv": "Normativ zaposlenih",
+            "tabela_fizicki_naziv": "radna_mesta",
+            "tabela_logicki_naziv": "Radna mesta",
+            "_id": "6469b724976d434aa956cc38"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc39"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc3a"
+        },
+        {
+            "fizicki_naziv": "ORG_OJ_ID",
+            "logicki_naziv": "Slozena jedinica",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc3b"
+        },
+        {
+            "fizicki_naziv": "SLJ_BROJ",
+            "logicki_naziv": "Broj",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc3c"
+        },
+        {
+            "fizicki_naziv": "OJ_ID",
+            "logicki_naziv": "Jedinica u sastavu",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc3d"
+        },
+        {
+            "fizicki_naziv": "SLJ_OD",
+            "logicki_naziv": "Od",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc3e"
+        },
+        {
+            "fizicki_naziv": "SLJ_DO",
+            "logicki_naziv": "Do",
+            "tabela_fizicki_naziv": "unutrasnja_organizacija",
+            "tabela_logicki_naziv": "Unutrasnja organizacija",
+            "_id": "6469b724976d434aa956cc3f"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "registar_delatnosti",
+            "tabela_logicki_naziv": "Registar delatnosti",
+            "_id": "6469b724976d434aa956cc40"
+        },
+        {
+            "fizicki_naziv": "DEL_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "registar_delatnosti",
+            "tabela_logicki_naziv": "Registar delatnosti",
+            "_id": "6469b724976d434aa956cc41"
+        },
+        {
+            "fizicki_naziv": "DEL_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "registar_delatnosti",
+            "tabela_logicki_naziv": "Registar delatnosti",
+            "_id": "6469b724976d434aa956cc42"
+        },
+        {
+            "fizicki_naziv": "REGD_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "registar_delatnosti",
+            "tabela_logicki_naziv": "Registar delatnosti",
+            "_id": "6469b724976d434aa956cc43"
+        },
+        {
+            "fizicki_naziv": "REGD_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "registar_delatnosti",
+            "tabela_logicki_naziv": "Registar delatnosti",
+            "_id": "6469b724976d434aa956cc44"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "naseljeno_mesto",
+            "tabela_logicki_naziv": "Naseljeno mesto",
+            "_id": "6469b724976d434aa956cc45"
+        },
+        {
+            "fizicki_naziv": "NM_ID",
+            "logicki_naziv": "Id naselja",
+            "tabela_fizicki_naziv": "naseljeno_mesto",
+            "tabela_logicki_naziv": "Naseljeno mesto",
+            "_id": "6469b724976d434aa956cc46"
+        },
+        {
+            "fizicki_naziv": "NM_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "naseljeno_mesto",
+            "tabela_logicki_naziv": "Naseljeno mesto",
+            "_id": "6469b724976d434aa956cc47"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drazva",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc48"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Partner",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc49"
+        },
+        {
+            "fizicki_naziv": "POS_DR_OZNAKA",
+            "logicki_naziv": "Drazva partnera",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc4a"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc4b"
+        },
+        {
+            "fizicki_naziv": "VP_ID",
+            "logicki_naziv": "Vrsta partnerstva",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc4c"
+        },
+        {
+            "fizicki_naziv": "PART_OD",
+            "logicki_naziv": "Od",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc4d"
+        },
+        {
+            "fizicki_naziv": "PART_DO",
+            "logicki_naziv": "Do",
+            "tabela_fizicki_naziv": "poslovni_partneri",
+            "tabela_logicki_naziv": "Poslovni partneri",
+            "_id": "6469b724976d434aa956cc4e"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drazva",
+            "tabela_fizicki_naziv": "raspored_po_jedinicama",
+            "tabela_logicki_naziv": "Raspored po jedinicama",
+            "_id": "6469b724976d434aa956cc4f"
+        },
+        {
+            "fizicki_naziv": "RAD_DR_OZNAKA",
+            "logicki_naziv": "Drazva",
+            "tabela_fizicki_naziv": "raspored_po_jedinicama",
+            "tabela_logicki_naziv": "Raspored po jedinicama",
+            "_id": "6469b724976d434aa956cc50"
+        },
+        {
+            "fizicki_naziv": "RM_ID",
+            "logicki_naziv": "Radno mesto",
+            "tabela_fizicki_naziv": "raspored_po_jedinicama",
+            "tabela_logicki_naziv": "Raspored po jedinicama",
+            "_id": "6469b724976d434aa956cc51"
+        },
+        {
+            "fizicki_naziv": "OJ_NORM",
+            "logicki_naziv": "Normativ",
+            "tabela_fizicki_naziv": "raspored_po_jedinicama",
+            "tabela_logicki_naziv": "Raspored po jedinicama",
+            "_id": "6469b724976d434aa956cc52"
+        },
+        {
+            "fizicki_naziv": "OJ_ID",
+            "logicki_naziv": "Organizaciona jedinica",
+            "tabela_fizicki_naziv": "raspored_po_jedinicama",
+            "tabela_logicki_naziv": "Raspored po jedinicama",
+            "_id": "6469b724976d434aa956cc53"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "raspored_po_jedinicama",
+            "tabela_logicki_naziv": "Raspored po jedinicama",
+            "_id": "6469b724976d434aa956cc54"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "registrovan_za_delatnost",
+            "tabela_logicki_naziv": "Registrovan za delatnosti",
+            "_id": "6469b724976d434aa956cc55"
+        },
+        {
+            "fizicki_naziv": "POS_DR_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "registrovan_za_delatnost",
+            "tabela_logicki_naziv": "Registrovan za delatnosti",
+            "_id": "6469b724976d434aa956cc56"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "ID",
+            "tabela_fizicki_naziv": "registrovan_za_delatnost",
+            "tabela_logicki_naziv": "Registrovan za delatnosti",
+            "_id": "6469b724976d434aa956cc57"
+        },
+        {
+            "fizicki_naziv": "DEL_ID",
+            "logicki_naziv": "Id2",
+            "tabela_fizicki_naziv": "registrovan_za_delatnost",
+            "tabela_logicki_naziv": "Registrovan za delatnosti",
+            "_id": "6469b724976d434aa956cc58"
+        },
+        {
+            "fizicki_naziv": "REGZ_DATUM",
+            "logicki_naziv": "Datum reg",
+            "tabela_fizicki_naziv": "registrovan_za_delatnost",
+            "tabela_logicki_naziv": "Registrovan za delatnosti",
+            "_id": "6469b724976d434aa956cc59"
+        },
+        {
+            "fizicki_naziv": "REGZ_DO",
+            "logicki_naziv": "Do",
+            "tabela_fizicki_naziv": "registrovan_za_delatnost",
+            "tabela_logicki_naziv": "Registrovan za delatnosti",
+            "_id": "6469b724976d434aa956cc5a"
+        },
+        {
+            "fizicki_naziv": "ORG_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc5b"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc5c"
+        },
+        {
+            "fizicki_naziv": "OJ_ID",
+            "logicki_naziv": "Organizaciona jedinica",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc5d"
+        },
+        {
+            "fizicki_naziv": "REG_DR_OZNAKA",
+            "logicki_naziv": "Reg_Oznaka",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc5e"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc5f"
+        },
+        {
+            "fizicki_naziv": "REGD_ID",
+            "logicki_naziv": "Delatnost",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc60"
+        },
+        {
+            "fizicki_naziv": "REG_DATUM_REG",
+            "logicki_naziv": "Datum reg",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc61"
+        },
+        {
+            "fizicki_naziv": "UOJ_OD",
+            "logicki_naziv": "U org je od",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc62"
+        },
+        {
+            "fizicki_naziv": "UOJ_DO",
+            "logicki_naziv": "Do",
+            "tabela_fizicki_naziv": "podrzane_u",
+            "tabela_logicki_naziv": "Podrzane u",
+            "_id": "6469b724976d434aa956cc63"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc64"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc65"
+        },
+        {
+            "fizicki_naziv": "TIPP_D",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc66"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc67"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Revizja",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc68"
+        },
+        {
+            "fizicki_naziv": "ETAPA_ID",
+            "logicki_naziv": "Etapa",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc69"
+        },
+        {
+            "fizicki_naziv": "AKT_OZNAKA",
+            "logicki_naziv": "Aktivnost",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc6a"
+        },
+        {
+            "fizicki_naziv": "AKTET_RBR",
+            "logicki_naziv": "Redni Broj",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc6b"
+        },
+        {
+            "fizicki_naziv": "AKTET_PLANSKI_POCETAK",
+            "logicki_naziv": "Planski pocetak",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc6c"
+        },
+        {
+            "fizicki_naziv": "AKTET_PLANSKI_ZAVRSETAK",
+            "logicki_naziv": "Planski zavrsetak",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc6d"
+        },
+        {
+            "fizicki_naziv": "AKTET_STVARNI_POCETAK",
+            "logicki_naziv": "Stvarni Pocetak",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc6e"
+        },
+        {
+            "fizicki_naziv": "AKTET_STVARNI_ZAVRSETAK",
+            "logicki_naziv": "Stvarni Zavrsetak",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc6f"
+        },
+        {
+            "fizicki_naziv": "AKTET_STVARNI_ZAVRSETAK",
+            "logicki_naziv": "Stvarni Zavrsetak",
+            "tabela_fizicki_naziv": "aktivnost_u_etapi",
+            "tabela_logicki_naziv": "aktivnost u etapi",
+            "_id": "6469b724976d434aa956cc70"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc71"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc72"
+        },
+        {
+            "fizicki_naziv": "TIPP_D",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc73"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc74"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc75"
+        },
+        {
+            "fizicki_naziv": "ETAPA_ID",
+            "logicki_naziv": "Etapa",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc76"
+        },
+        {
+            "fizicki_naziv": "ETAP_PLANIRANI_POCETAK",
+            "logicki_naziv": "Planirani pocetak etape",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc77"
+        },
+        {
+            "fizicki_naziv": "ETAP_PLANIRANI_ZAVRSETAK",
+            "logicki_naziv": "Planirani zavrsetak etape",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc78"
+        },
+        {
+            "fizicki_naziv": "ETAP_STVARNI_POCETAK",
+            "logicki_naziv": "Stvarni pocetak etape",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc79"
+        },
+        {
+            "fizicki_naziv": "ETAP_STVARNI_ZAVRSETAK",
+            "logicki_naziv": "Stvarni zavrsetak etape",
+            "tabela_fizicki_naziv": "etape_u_projektu",
+            "tabela_logicki_naziv": "Etape u projektu",
+            "_id": "6469b724976d434aa956cc7a"
+        },
+        {
+            "fizicki_naziv": "AKT_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "katalog_aktivnosti",
+            "tabela_logicki_naziv": "Katalog aktivnosti",
+            "_id": "6469b724976d434aa956cc7b"
+        },
+        {
+            "fizicki_naziv": "AKT_NAZIV",
+            "logicki_naziv": "Naziv aktivnosti",
+            "tabela_fizicki_naziv": "katalog_aktivnosti",
+            "tabela_logicki_naziv": "Katalog aktivnosti",
+            "_id": "6469b724976d434aa956cc7c"
+        },
+        {
+            "fizicki_naziv": "SOF_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc7d"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc7e"
+        },
+        {
+            "fizicki_naziv": "SRP_KATBR",
+            "logicki_naziv": "Katalo\u0161ki broj",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc7f"
+        },
+        {
+            "fizicki_naziv": "SPR_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc80"
+        },
+        {
+            "fizicki_naziv": "VER_OZNAKA",
+            "logicki_naziv": "Oznaka verzije",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc81"
+        },
+        {
+            "fizicki_naziv": "KONF_ID",
+            "logicki_naziv": "Id konfig",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc82"
+        },
+        {
+            "fizicki_naziv": "KONF_NAZIV",
+            "logicki_naziv": "Naziv konfiguracije",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc83"
+        },
+        {
+            "fizicki_naziv": "KONF_ISPOR",
+            "logicki_naziv": "Isporu\u010duje se?",
+            "tabela_fizicki_naziv": "konfiguracija",
+            "tabela_logicki_naziv": "Kongfiguracija",
+            "_id": "6469b724976d434aa956cc84"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b724976d434aa956cc85"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b724976d434aa956cc86"
+        },
+        {
+            "fizicki_naziv": "TIPP_D",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b724976d434aa956cc87"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b724976d434aa956cc88"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Planirani po\u010detak",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b724976d434aa956cc89"
+        },
+        {
+            "fizicki_naziv": "PROJ_NAZIV",
+            "logicki_naziv": "Planirani Zavr\u0161etak",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b724976d434aa956cc8a"
+        },
+        {
+            "fizicki_naziv": "PROJ_DATPOKR",
+            "logicki_naziv": "Stvarni po\u010detak",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b725976d434aa956cc8b"
+        },
+        {
+            "fizicki_naziv": "PROJ_DATOKON",
+            "logicki_naziv": "Stvarni zavr\u0161etak",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b725976d434aa956cc8c"
+        },
+        {
+            "fizicki_naziv": "PROJ_STVARNI_POCETAK",
+            "logicki_naziv": "Stvarni po\u010detak",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b725976d434aa956cc8d"
+        },
+        {
+            "fizicki_naziv": "PROJ_STVARNI_ZAVRSETAK",
+            "logicki_naziv": "Stvarni zavr\u0161etak",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b725976d434aa956cc8e"
+        },
+        {
+            "fizicki_naziv": "ID_PROCESA",
+            "logicki_naziv": "Id procesa",
+            "tabela_fizicki_naziv": "projekat_realizacije_softvera",
+            "tabela_logicki_naziv": "Projekat realizacije softvera",
+            "_id": "6469b725976d434aa956cc8f"
+        },
+        {
+            "fizicki_naziv": "ETA_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc90"
+        },
+        {
+            "fizicki_naziv": "ETA_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc91"
+        },
+        {
+            "fizicki_naziv": "TIPP_D",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc92"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc93"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc94"
+        },
+        {
+            "fizicki_naziv": "ETAPA_ID",
+            "logicki_naziv": "Etapa",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc95"
+        },
+        {
+            "fizicki_naziv": "STA_SPR_KATBR",
+            "logicki_naziv": "Proizvod",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc96"
+        },
+        {
+            "fizicki_naziv": "STA_SPR_TIP",
+            "logicki_naziv": "Tip proizvoda",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc97"
+        },
+        {
+            "fizicki_naziv": "STA_VER_OZNAKA",
+            "logicki_naziv": "Verzija proizvoda",
+            "tabela_fizicki_naziv": "proizvodi_u_etapi",
+            "tabela_logicki_naziv": "Proizvodi u etapi",
+            "_id": "6469b725976d434aa956cc98"
+        },
+        {
+            "fizicki_naziv": "SOF_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc99"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc9a"
+        },
+        {
+            "fizicki_naziv": "KON_SPR_KATBR",
+            "logicki_naziv": "Kon_Katalo\u0161ki broj",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc9b"
+        },
+        {
+            "fizicki_naziv": "KON_SPR_TIP",
+            "logicki_naziv": "Kon_Tip",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc9c"
+        },
+        {
+            "fizicki_naziv": "KON_VER_OZNAKA",
+            "logicki_naziv": "Kon_Oznaka verzije",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc9d"
+        },
+        {
+            "fizicki_naziv": "KONF_ID",
+            "logicki_naziv": "Id konfig",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc9e"
+        },
+        {
+            "fizicki_naziv": "SASTAV_RBR",
+            "logicki_naziv": "Redni broj",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cc9f"
+        },
+        {
+            "fizicki_naziv": "VER_SOF_DR_OZNAKA",
+            "logicki_naziv": "Ver_Sof_Oznaka",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cca0"
+        },
+        {
+            "fizicki_naziv": "VER_POS_PS_ID",
+            "logicki_naziv": "Ver_Pos_ID",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cca1"
+        },
+        {
+            "fizicki_naziv": "SPR_KATBR",
+            "logicki_naziv": "Ver_Katalo\u0161ki broj",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cca2"
+        },
+        {
+            "fizicki_naziv": "SPR_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cca3"
+        },
+        {
+            "fizicki_naziv": "VER_OZNAKA",
+            "logicki_naziv": "Oznaka verzije",
+            "tabela_fizicki_naziv": "sastav",
+            "tabela_logicki_naziv": "Sastav",
+            "_id": "6469b725976d434aa956cca4"
+        },
+        {
+            "fizicki_naziv": "STR_AKT_OZNAKA",
+            "logicki_naziv": "Slozena aktivnost",
+            "tabela_fizicki_naziv": "sastav__u_verziji",
+            "tabela_logicki_naziv": "Sastav u verziji",
+            "_id": "6469b725976d434aa956cca5"
+        },
+        {
+            "fizicki_naziv": "AKT_VERZIJA",
+            "logicki_naziv": "Verzija",
+            "tabela_fizicki_naziv": "sastav__u_verziji",
+            "tabela_logicki_naziv": "Sastav u verziji",
+            "_id": "6469b725976d434aa956cca6"
+        },
+        {
+            "fizicki_naziv": "AKT_OZNAKA",
+            "logicki_naziv": "Aktivnost u sastavu",
+            "tabela_fizicki_naziv": "sastav__u_verziji",
+            "tabela_logicki_naziv": "Sastav u verziji",
+            "_id": "6469b725976d434aa956cca7"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "softverski_proces",
+            "tabela_logicki_naziv": "Softverski proces",
+            "_id": "6469b725976d434aa956cca8"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "softverski_proces",
+            "tabela_logicki_naziv": "Softverski proces",
+            "_id": "6469b725976d434aa956cca9"
+        },
+        {
+            "fizicki_naziv": "ID_PROCESA",
+            "logicki_naziv": "Id procesa",
+            "tabela_fizicki_naziv": "softverski_proces",
+            "tabela_logicki_naziv": "Softverski proces",
+            "_id": "6469b725976d434aa956ccaa"
+        },
+        {
+            "fizicki_naziv": "PROC_NAZIV",
+            "logicki_naziv": "Naziv modela",
+            "tabela_fizicki_naziv": "softverski_proces",
+            "tabela_logicki_naziv": "Softverski proces",
+            "_id": "6469b725976d434aa956ccab"
+        },
+        {
+            "fizicki_naziv": "TIPP_D",
+            "logicki_naziv": "ID",
+            "tabela_fizicki_naziv": "tip_projekta",
+            "tabela_logicki_naziv": "Tip projekta",
+            "_id": "6469b725976d434aa956ccac"
+        },
+        {
+            "fizicki_naziv": "TIPP_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "tip_projekta",
+            "tabela_logicki_naziv": "Tip projekta",
+            "_id": "6469b725976d434aa956ccad"
+        },
+        {
+            "fizicki_naziv": "SOF_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccae"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccaf"
+        },
+        {
+            "fizicki_naziv": "SPR_KATBR",
+            "logicki_naziv": "Katalo\u0161ki broj",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb0"
+        },
+        {
+            "fizicki_naziv": "SPR_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb1"
+        },
+        {
+            "fizicki_naziv": "VER_OZNAKA",
+            "logicki_naziv": "Oznaka verzije",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb2"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Dr\u017eava verzionera",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb3"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija verzioner",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb4"
+        },
+        {
+            "fizicki_naziv": "VER_DATFORM",
+            "logicki_naziv": "Datum formiranja",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb5"
+        },
+        {
+            "fizicki_naziv": "VER_DATUK",
+            "logicki_naziv": "Datum ukidanja",
+            "tabela_fizicki_naziv": "verzija",
+            "tabela_logicki_naziv": "Verzija",
+            "_id": "6469b725976d434aa956ccb6"
+        },
+        {
+            "fizicki_naziv": "AKT_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccb7"
+        },
+        {
+            "fizicki_naziv": "AKT_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccb8"
+        },
+        {
+            "fizicki_naziv": "AKT_TIPP_D",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccb9"
+        },
+        {
+            "fizicki_naziv": "AKT_PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccba"
+        },
+        {
+            "fizicki_naziv": "AKT_PROJ_REVIZIJA",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccbb"
+        },
+        {
+            "fizicki_naziv": "AKT_ETAPA_ID2",
+            "logicki_naziv": "Etapa",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccbc"
+        },
+        {
+            "fizicki_naziv": "AKT_AKT_OZNAKA",
+            "logicki_naziv": "Aktivnost",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccbd"
+        },
+        {
+            "fizicki_naziv": "AKT_AKTET_RBR",
+            "logicki_naziv": "Redni broj",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccbe"
+        },
+        {
+            "fizicki_naziv": "PRO_STA_SPR_KATBR",
+            "logicki_naziv": "Proizvod",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccbf"
+        },
+        {
+            "fizicki_naziv": "PRO_STA_SPR_TIP",
+            "logicki_naziv": "Tip proizvoda",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccc0"
+        },
+        {
+            "fizicki_naziv": "STA_VER_OZNAKA",
+            "logicki_naziv": "Verzija proizvoda",
+            "tabela_fizicki_naziv": "sta_se_predaje_u_aktivnosti",
+            "tabela_logicki_naziv": "Sta se predaje u aktivnosti",
+            "_id": "6469b725976d434aa956ccc1"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Dr\u017eava",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc2"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc3"
+        },
+        {
+            "fizicki_naziv": "SPR_KATBR",
+            "logicki_naziv": "Katalo\u0161ki broj",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc4"
+        },
+        {
+            "fizicki_naziv": "SPR_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc5"
+        },
+        {
+            "fizicki_naziv": "SPR_NAZIV",
+            "logicki_naziv": "Naziv proizvoda",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc6"
+        },
+        {
+            "fizicki_naziv": "DATUM_KATALOGIZIRANJA",
+            "logicki_naziv": "Datum katalogiziranja",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc7"
+        },
+        {
+            "fizicki_naziv": "DATUM_OBUSTAVLJANJA",
+            "logicki_naziv": "Datum obustavljanja",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc8"
+        },
+        {
+            "fizicki_naziv": "POS_DR_OZNAKA",
+            "logicki_naziv": "Dr\u017eava proizvo\u0111a\u010da",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccc9"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija proizvo\u0111a\u010d",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956ccca"
+        },
+        {
+            "fizicki_naziv": "SPR_STATUS",
+            "logicki_naziv": "Status",
+            "tabela_fizicki_naziv": "softverski_proizvod",
+            "tabela_logicki_naziv": "Softverski proizvod",
+            "_id": "6469b725976d434aa956cccb"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "struktura_procesa",
+            "tabela_logicki_naziv": "Struktura procesa",
+            "_id": "6469b725976d434aa956cccc"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "struktura_procesa",
+            "tabela_logicki_naziv": "Struktura procesa",
+            "_id": "6469b725976d434aa956cccd"
+        },
+        {
+            "fizicki_naziv": "ID_PROCESA",
+            "logicki_naziv": "Id procesa",
+            "tabela_fizicki_naziv": "struktura_procesa",
+            "tabela_logicki_naziv": "Struktura procesa",
+            "_id": "6469b725976d434aa956ccce"
+        },
+        {
+            "fizicki_naziv": "AKT_OZNAKA",
+            "logicki_naziv": "Aktivnost",
+            "tabela_fizicki_naziv": "struktura_procesa",
+            "tabela_logicki_naziv": "Struktura procesa",
+            "_id": "6469b725976d434aa956cccf"
+        },
+        {
+            "fizicki_naziv": "AKT_VERZIJA",
+            "logicki_naziv": "Verzija",
+            "tabela_fizicki_naziv": "struktura_procesa",
+            "tabela_logicki_naziv": "Struktura procesa",
+            "_id": "6469b725976d434aa956ccd0"
+        },
+        {
+            "fizicki_naziv": "AKT_OZNAKA",
+            "logicki_naziv": "Aktivnost",
+            "tabela_fizicki_naziv": "struktura_aktivnosti",
+            "tabela_logicki_naziv": "Struktura aktivnosti",
+            "_id": "6469b725976d434aa956ccd1"
+        },
+        {
+            "fizicki_naziv": "AKT_VERZIJA",
+            "logicki_naziv": "Verzija",
+            "tabela_fizicki_naziv": "struktura_aktivnosti",
+            "tabela_logicki_naziv": "Struktura aktivnosti",
+            "_id": "6469b725976d434aa956ccd2"
+        },
+        {
+            "fizicki_naziv": "AKT_DATFORM",
+            "logicki_naziv": "Datum formiranja",
+            "tabela_fizicki_naziv": "struktura_aktivnosti",
+            "tabela_logicki_naziv": "Struktura aktivnosti",
+            "_id": "6469b725976d434aa956ccd3"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccd4"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccd5"
+        },
+        {
+            "fizicki_naziv": "TIPP_D",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccd6"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccd7"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccd8"
+        },
+        {
+            "fizicki_naziv": "SPR_KATBR",
+            "logicki_naziv": "Katalo\u0161ki broj",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccd9"
+        },
+        {
+            "fizicki_naziv": "SPR_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccda"
+        },
+        {
+            "fizicki_naziv": "VER_OZNAKA",
+            "logicki_naziv": "Oznaka verzije",
+            "tabela_fizicki_naziv": "sta_je_predmet_projekta",
+            "tabela_logicki_naziv": "Sta je predmet projekta",
+            "_id": "6469b725976d434aa956ccdb"
+        },
+        {
+            "fizicki_naziv": "DZ_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "domen_zahteva",
+            "tabela_logicki_naziv": "Domen zahteva",
+            "_id": "6469b725976d434aa956ccdc"
+        },
+        {
+            "fizicki_naziv": "DZ_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "domen_zahteva",
+            "tabela_logicki_naziv": "Domen zahteva",
+            "_id": "6469b725976d434aa956ccdd"
+        },
+        {
+            "fizicki_naziv": "KAT_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "klasifikator",
+            "tabela_logicki_naziv": "Klasifikator",
+            "_id": "6469b725976d434aa956ccde"
+        },
+        {
+            "fizicki_naziv": "KAT_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "klasifikator",
+            "tabela_logicki_naziv": "Klasifikator",
+            "_id": "6469b725976d434aa956ccdf"
+        },
+        {
+            "fizicki_naziv": "PRO_DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce0"
+        },
+        {
+            "fizicki_naziv": "PRO_PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce1"
+        },
+        {
+            "fizicki_naziv": "TIPP_ID",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce2"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce3"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce4"
+        },
+        {
+            "fizicki_naziv": "DZ_ID",
+            "logicki_naziv": "Domen",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce5"
+        },
+        {
+            "fizicki_naziv": "ZAHTEV_ID",
+            "logicki_naziv": "Zahtev",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce6"
+        },
+        {
+            "fizicki_naziv": "ZAHTEV_VERZIJA",
+            "logicki_naziv": "Verzija",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce7"
+        },
+        {
+            "fizicki_naziv": "ZAIN_ID",
+            "logicki_naziv": "Zainteresovana strana",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce8"
+        },
+        {
+            "fizicki_naziv": "ZAIN_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cce9"
+        },
+        {
+            "fizicki_naziv": "ULO_OZNAKA",
+            "logicki_naziv": "Uloga",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956ccea"
+        },
+        {
+            "fizicki_naziv": "KOM_KOMENTAR",
+            "logicki_naziv": "Komentar",
+            "tabela_fizicki_naziv": "ko_se_pita",
+            "tabela_logicki_naziv": "Ko se pita",
+            "_id": "6469b725976d434aa956cceb"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccec"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956cced"
+        },
+        {
+            "fizicki_naziv": "TIPP_ID",
+            "logicki_naziv": "Tip projekta",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccee"
+        },
+        {
+            "fizicki_naziv": "PROJ_ID",
+            "logicki_naziv": "Projekat",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccef"
+        },
+        {
+            "fizicki_naziv": "PROJ_REVIZIJA",
+            "logicki_naziv": "Revizija",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf0"
+        },
+        {
+            "fizicki_naziv": "DZ_ID",
+            "logicki_naziv": "Domen",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf1"
+        },
+        {
+            "fizicki_naziv": "ZAHTEV_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf2"
+        },
+        {
+            "fizicki_naziv": "ZAHTEB_VERZIJA",
+            "logicki_naziv": "Verzija",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf3"
+        },
+        {
+            "fizicki_naziv": "ZAHTEV_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf4"
+        },
+        {
+            "fizicki_naziv": "ZAHTEV_OPIS",
+            "logicki_naziv": "Opis",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf5"
+        },
+        {
+            "fizicki_naziv": "KAT_ID",
+            "logicki_naziv": "Klasifikacija",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf6"
+        },
+        {
+            "fizicki_naziv": "PRIOR_ID",
+            "logicki_naziv": "Prioritet",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf7"
+        },
+        {
+            "fizicki_naziv": "ISTAT_ID",
+            "logicki_naziv": "Status",
+            "tabela_fizicki_naziv": "projektni_zahtevi",
+            "tabela_logicki_naziv": "Projektni zahtev",
+            "_id": "6469b725976d434aa956ccf8"
+        },
+        {
+            "fizicki_naziv": "PRIOR_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "prioritet",
+            "tabela_logicki_naziv": "Prioritet",
+            "_id": "6469b725976d434aa956ccf9"
+        },
+        {
+            "fizicki_naziv": "PRIOR_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "prioritet",
+            "tabela_logicki_naziv": "Prioritet",
+            "_id": "6469b725976d434aa956ccfa"
+        },
+        {
+            "fizicki_naziv": "ISTAT_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "status_zahteva",
+            "tabela_logicki_naziv": "Status zahteva",
+            "_id": "6469b725976d434aa956ccfb"
+        },
+        {
+            "fizicki_naziv": "ISTAT_NAZIV",
+            "logicki_naziv": "Naziv",
+            "tabela_fizicki_naziv": "status_zahteva",
+            "tabela_logicki_naziv": "Status zahteva",
+            "_id": "6469b725976d434aa956ccfc"
+        },
+        {
+            "fizicki_naziv": "DR_OZNAKA",
+            "logicki_naziv": "Drzava",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956ccfd"
+        },
+        {
+            "fizicki_naziv": "PS_ID",
+            "logicki_naziv": "Kompanija",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956ccfe"
+        },
+        {
+            "fizicki_naziv": "ZAIN_ID",
+            "logicki_naziv": "Id",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956ccff"
+        },
+        {
+            "fizicki_naziv": "ZAIN_TIP",
+            "logicki_naziv": "Tip",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd00"
+        },
+        {
+            "fizicki_naziv": "ULO_OZNAKA",
+            "logicki_naziv": "Uloga",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd01"
+        },
+        {
+            "fizicki_naziv": "POS_DR_OZNAKA",
+            "logicki_naziv": "Pos_Drzava",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd02"
+        },
+        {
+            "fizicki_naziv": "POS_PS_ID",
+            "logicki_naziv": "Pos_Kompanija",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd03"
+        },
+        {
+            "fizicki_naziv": "ZAIN_PERSONALNI",
+            "logicki_naziv": "Personalni",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd04"
+        },
+        {
+            "fizicki_naziv": "ULO_OZNAKA",
+            "logicki_naziv": "Oznaka",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd05"
+        },
+        {
+            "fizicki_naziv": "ULO_NAZIV",
+            "logicki_naziv": "Naziv uloge",
+            "tabela_fizicki_naziv": "zainteresovane_strane",
+            "tabela_logicki_naziv": "Zainteresovane strane",
+            "_id": "6469b725976d434aa956cd06"
+        }
+    ],
+    "katalog_aktivnosti": [
+        {
+            "AKT_OZNAKA": "A1",
+            "AKT_NAZIV": "Akt naziv 1",
+            "_id": "6469b725976d434aa956cd07"
+        }
+    ],
+    "klasifikator": [
+        {
+            "KAT_ID": "K",
+            "KAT_NAZIV": "KlasifikatorTest1",
+            "_id": "6469b725976d434aa956cd08"
+        }
+    ],
+    "ko_se_pita": [],
+    "konfiguracija": [],
+    "naseljeno_mesto": [
+        {
+            "DR_OZNAKA": "SRB",
+            "NM_ID": 1,
+            "NM_NAZIV": "Novi Sad",
+            "_id": "6469b725976d434aa956cd09"
+        },
+        {
+            "DR_OZNAKA": "SRB",
+            "NM_ID": 2,
+            "NM_NAZIV": "Vrsac",
+            "_id": "6469b726976d434aa956cd0a"
+        }
+    ],
+    "organizacione_jedinice": [],
+    "podrzane_u": [],
+    "poslovni_partneri": [],
+    "poslovni_subjekat": [],
+    "prioritet": [
+        {
+            "PRIOR_ID": "E",
+            "PRIOR_NAZIV": "Esencijalan",
+            "_id": "6469b726976d434aa956cd0b"
+        },
+        {
+            "PRIOR_ID": "P",
+            "PRIOR_NAZIV": "Primaran",
+            "_id": "6469b726976d434aa956cd0c"
+        }
+    ],
+    "proizvodi_u_etapi": [],
+    "projekat_realizacije_softvera": [],
+    "projektni_zahtevi": [],
+    "radna_mesta": [],
+    "raspored_po_jedinicama": [],
+    "registar_delatnosti": [],
+    "registrovan_za_delatnost": [],
+    "sastav": [],
+    "sastav__u_verziji": [],
+    "softverski_proces": [],
+    "softverski_proizvod": [],
+    "sta_je_predmet_projekta": [],
+    "sta_se_predaje_u_aktivnosti": [],
+    "status_zahteva": [],
+    "struktura_aktivnosti": [],
+    "struktura_procesa": [],
+    "tip_projekta": [
+        {
+            "TIPP_D": "D",
+            "TIPP_NAZIV": "Projekat ima predvidjen i ogranicen budzet",
+            "_id": "6469b726976d434aa956cd0d"
+        }
+    ],
+    "uloge": [],
+    "unutrasnja_organizacija": [],
+    "verzija": [],
+    "vrsta_partnerstva": [],
+    "zainteresovane_strane": []
+}
