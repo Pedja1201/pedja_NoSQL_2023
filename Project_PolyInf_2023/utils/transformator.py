@@ -87,7 +87,7 @@ class Transformator(QDialog):
         with open('result.json', 'w') as f:
             json.dump(results, f, default=str, indent=4, separators=(',', ': '))
 
-        self.label.setText("Transformacija završena! Rezultati su zapisani u result.json.")
+        self.label.setText("Transformation complete! The results are written in result.json.")
 
 # if __name__ == "__main__":
 #     app = QApplication([])
