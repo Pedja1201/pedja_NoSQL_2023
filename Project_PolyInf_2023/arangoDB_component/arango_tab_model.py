@@ -1,6 +1,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QTreeWidgetItem, QTableWidgetItem
 from PyQt5.QtCore import Qt
+import re
+import json
+from bson.json_util import loads, dumps
 
 from utils.arango_utils import ArangoUtils
 
@@ -11,13 +14,36 @@ class ArangoTabModel:
     #Greska je u ovoj funkciji i get_table_data
     def load_table_data(self, database_name, table_name, dataTableWidget, table_data=None, mark_new_row=False):
         table_data = self.arango_utils.get_table_data(database_name, table_name)
-        table_columns = self.arango_utils.get_table_columns(database_name, table_name)
+
         print("")
-        print("DOBIJEN IZ LOAD TALBE DATA-TABLE DATA: ", table_data)
+        print("DOBIJEN IZ load_table_data: ", table_data)
         print("")
-        print("")
-        print("DOBIJEN IZ LOAD TALBE DATA-TABLE COLUMNS: ", table_columns)
-        print("")
+        
+        data = str(table_data)
+
+        pattern = r"_id: ([^,]+).*?<store: ({[^>]+})>"
+
+        matches = re.findall(pattern, data)
+
+        results = []
+
+        for match in matches:
+            try:
+                store_data = json.loads(match[1].replace("'", "\""))
+                results.append((match[0], store_data))
+            except json.JSONDecodeError as e:
+                print(f"Greška pri parsiranju JSON-a: {e}")
+
+        json_data = json.dumps(results, indent=4, sort_keys=True)
+
+        dataTableWidget.addItem(json_data)
+
+        print("STORES IZ load_table_data: ", json_data)
+
+        # print("")
+        # print("DOBIJEN IZ LOAD TALBE DATA-TABLE COLUMNS: ", table_columns)
+        # print("")
+        
         # if table_data is None:
         #     table_data = []
 
