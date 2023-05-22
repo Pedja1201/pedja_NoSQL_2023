@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt
 from pymongo import MongoClient
 from mongoDB_component.mongoDB_viewer import MongoTabViewer
 from mySQL_tab_component.mySQL_tab_viewer import MySQLTabViewer
-from arangoDB_component.arango_tab_viever import ArangoTabViewer
+from arangoDB_component.arango_tab_viewer import ArangoTabViewer
 
 from utils.mysql_utils import MySQLUtils
 from utils.mongo_utils import MongoUtils

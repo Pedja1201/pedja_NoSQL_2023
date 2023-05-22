@@ -15,7 +15,7 @@ class ArangoTabViewer(QtWidgets.QWidget):
 
         self.setObjectName("arangoTabViewer")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(5, 10, 1630, 205))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(5, 10, 600, 460))
         self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
         self.DataVerticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
         self.DataVerticalLayout.setContentsMargins(0, 0, 0, 0)
