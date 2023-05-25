@@ -1,0 +1,26 @@
+{
+    "sta_je_predmet_projekta":{ //Najnizi sloj hijerarhije(Privezak kljuceva)
+        "drzava":"<oznaka drzave>",
+        "kompanije":{
+            "id_kompanije":"<ID_Kompanije>",
+            "naziv":"<Naziv kompanije>"
+        },
+        "kataloski_broj":{ //Primarni kljuc za soft proizvod!!!
+            "naziv_proizvoda":"<Naziv proizvoda>",
+            "kataloski_broj":"<Kataloski broj>"
+        },
+        "projekat":[{ //primarni kljuc za projekat realizacije softvera
+            "tip_projekta":{
+                "ID": "<id tipa projekta>",
+                "naziv":"<naziv projekta>"
+            },
+            "ID_projekta":"<ID_projekta>",
+            "naziv":"<NazivProjekta>"
+        }],
+        "oznaka_verzije":{ //primarni kljuc za Verziju
+            "oznaka_verzije":"<Oznaka verzije>",
+            "tip_verzije":"<tip verzije>",
+            "drzava_verzionara":"<int Oznaka drzave>"
+        }
+    }
+}
