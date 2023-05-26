@@ -7,6 +7,8 @@ from data_handler_dialog.data_handler_dialog import DataHandlerDialog
 from data_handler_dialog.table_reference_spec import load_spec
 from reference_tables_component.reference_table_component.ref_table_viewer import RefTableViewer
 
+lista_otvorenih_tabova = []
+
 
 class MainWindowController:
     def __init__(self):
@@ -44,14 +46,18 @@ class MainWindowController:
 
     def add_mysql_table_tab(self, treeItem, column, dataTabWidget, statusBar, CRUDActionsViewer):
         table_name = treeItem.text(column)
-        # provera da li je kliknuta tabela ili baza
-        if treeItem.parent() != None:
-            database_name = treeItem.parent().text(column)
-            self.main_window_model.add_mysql_table_tab(
-                database_name, table_name, dataTabWidget, statusBar, CRUDActionsViewer)
+        if table_name not in lista_otvorenih_tabova:
+            lista_otvorenih_tabova.append(table_name)
+            # provera da li je kliknuta tabela ili baza
+            if treeItem.parent() != None:
+                database_name = treeItem.parent().text(column)
+                self.main_window_model.add_mysql_table_tab(
+                    database_name, table_name, dataTabWidget, statusBar, CRUDActionsViewer)
 
-    def close_tab(self, tab_index, dataTabWidget):
-        dataTabWidget.removeTab(tab_index)
+        # treba dodati da udje u fokus odabrani tab koji je vec otvoren
+
+    # def close_tab(self, tab_index, dataTabWidget):
+    #     dataTabWidget.removeTab(tab_index)
 
     def show_mysql_ref_tables(self, tab_index, dataTabWidget, refTablesViewer, refLabel, MainWindow, statusBar, CRUDActionsViewer):
         refTablesViewer.clear_HBoxLayout()
@@ -126,11 +132,11 @@ class MainWindowController:
     def transform_from_sql_to_mongo(self, mongoDBTreeWidget, statusBar):
         self.main_window_model.transform_to_mongo(mongoDBTreeWidget, statusBar)
 
-    #Arango
+    # Arango
 
     def load_and_connect_arangodb(self, arangoDBTreeWidget, statusBar):
-        self.main_window_model.load_and_connect_arangodb(arangoDBTreeWidget, statusBar)
-
+        self.main_window_model.load_and_connect_arangodb(
+            arangoDBTreeWidget, statusBar)
 
     def add_arango_table_tab(self, treeItem, column, dataTabWidget, statusBar, CRUDActionsViewer):
         table_name = treeItem.text(column)
@@ -140,9 +146,9 @@ class MainWindowController:
             self.main_window_model.add_arango_table_tab(
                 database_name, table_name, dataTabWidget, statusBar, CRUDActionsViewer)
 
-
     def close_tab(self, tab_index, dataTabWidget):
         dataTabWidget.removeTab(tab_index)
+        lista_otvorenih_tabova.pop(tab_index+1)
 
     # za sve
 

@@ -26,7 +26,8 @@ class MySQLUtils:
                         user="root",
                         # password="root",
                         password='pedja10', #Pedja
-                        db="upravljanje_projektom"
+                        # db="upravljanje_projektom"
+                        db="nosql_baza_cinjenica_2023"
                         # hostname=config_json["localhost"],
                         # port=3306,
                         # username=config_json["root"],

@@ -28,7 +28,8 @@ class MainWindowModel:
         self.fill_mysql_tree(mySQLTreeWidget)
 
     def create_mysql_database(self, new_database_name, mySQLTreeWidget, statusBar):
-        matched_items = mySQLTreeWidget.findItems(new_database_name, Qt.MatchContains, 0)
+        matched_items = mySQLTreeWidget.findItems(
+            new_database_name, Qt.MatchContains, 0)
         if len(matched_items) > 0:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)
@@ -58,9 +59,11 @@ class MainWindowModel:
         self.fill_mysql_tree(mySQLTreeWidget)
 
     def load_collections(self, current_database_name, collectionsComboBox):
-        table_names_typle = self.mySQL_utils.get_all_tables(current_database_name)
+        table_names_typle = self.mySQL_utils.get_all_tables(
+            current_database_name)
         collectionsComboBox.clear()
-        collectionsComboBox.addItems([table_name[0] for table_name in table_names_typle])
+        collectionsComboBox.addItems([table_name[0]
+                                     for table_name in table_names_typle])
 
     def fill_mysql_tree(self, mySQLTreeWidget):
         mySQLTreeWidget.clear()
@@ -74,7 +77,8 @@ class MainWindowModel:
                 database_item = QTreeWidgetItem(mySQLTreeWidget)
                 database_name = database[0]
                 database_item.setText(0, database_name)
-                table_names_typle = self.mySQL_utils.get_all_tables(database_name)
+                table_names_typle = self.mySQL_utils.get_all_tables(
+                    database_name)
 
                 for table in table_names_typle:
                     table_item = QTreeWidgetItem(database_item)
@@ -82,7 +86,8 @@ class MainWindowModel:
                     table_item.setText(0, table_name)
 
     def add_mysql_table_tab(self, database_name, table_name, dataTabWidget, statusBar, CRUDActionsViewer):
-        mySQL_tab_viewer = MySQLTabViewer(database_name, table_name, statusBar, CRUDActionsViewer)
+        mySQL_tab_viewer = MySQLTabViewer(
+            database_name, table_name, statusBar, CRUDActionsViewer)
         dataTabWidget.addTab(mySQL_tab_viewer, table_name)
         dataTabWidget.setCurrentWidget(mySQL_tab_viewer)
 
@@ -93,7 +98,8 @@ class MainWindowModel:
         self.fill_mongo_tree(mongoDBTreeWidget)
 
     def create_mongo_database(self, new_database_name, mongoDBTreeWidget, statusBar):
-        matched_items = mongoDBTreeWidget.findItems(new_database_name, Qt.MatchContains, 0)
+        matched_items = mongoDBTreeWidget.findItems(
+            new_database_name, Qt.MatchContains, 0)
         if len(matched_items) > 0:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)
@@ -126,7 +132,8 @@ class MainWindowModel:
             for database_name in databases:
                 mongo_database_item = QTreeWidgetItem(mongoDBTreeWidget)
                 mongo_database_item.setText(0, database_name)
-                mongo_db_collections = self.mongo_utils.get_all_tables(database_name)
+                mongo_db_collections = self.mongo_utils.get_all_tables(
+                    database_name)
                 collections = self.mongo_utils.get_all_tables(database_name)
 
                 for collection in collections:
@@ -157,56 +164,56 @@ class MainWindowModel:
     def transform_to_mongo(self, mongoDBTreeWidget, statusBar):
         transformator = Transformator()
         transformator.exec_()
-
-                #Ispod zakomentarisano predstavlja transformaciju u mongo sa json fajlovima, example.json. Gore je instancirana Klasa koja transformise prave podatke iz MySQL-a
-    #     databases = self.mySQL_utils.get_all_databases()
-    #     if databases is None:
-    #         return
-
-    #     database_names = [database[0] for database in databases]
-    #     item, ok = QtWidgets.QInputDialog.getItem(None, "Choose your database for MongoDB",
-    #                                               "List of databases:", database_names, 0, False)
-
-    #     if not ok or not item:
-    #         return
-
-    #     database_name = item
-
-    #     # sql_load = self.mySQL_utils.load_and_connect_db(statusBar)
-    #     # mongo_load = self.mongo_utils.load_and_connect_db(statusBar)
-
-    #     #  Load the configuration files
-    #     relationships = load_config("example_mysql.json")
-    #     doc = load_config("example.json")
-
-    #     #  Retrieve data from the relational database
-    #     database = database_name
-    #     table = list(doc.keys())[0]
-    #     result_doc = {"title": table}
-    #     data = self.mySQL_utils.search(database, table, doc[table]["columns"], doc[table]["values"]).fetchall()
-
-    #     for t in doc[table]["content"]:
-    #         content = self.mySQL_utils.search(database, t, [relationships[t][table]], doc[table]["values"]).fetchall()
-    #         result_doc[t] = content
-
-    #     # Write the transformed data to a JSON file
-    #     with open("result_doc.json", "w", encoding="utf-8") as f:
-    #         json.dump(result_doc, f)
-
-    #     # Connect to MongoDB and insert the transformed data
-    #     client = MongoClient("mongodb://root:root@localhost:27017/")  # PedjaDOcker
-    #     # client = MongoClient("mongodb://root:root@localhost:27017/")  #ForOthersMembers
-    #     db = client["upravljanje_projektom"]
-    #     collection = db["docs"]
-    #     with open("result_doc.json", "r", encoding="utf-8") as f:
-    #         result_data = json.load(f)
-    #         collection.insert_one(result_data)
+        # Ispod zakomentarisano predstavlja transformaciju u mongo sa json fajlovima, example.json. Gore je instancirana Klasa koja transformise prave podatke iz MySQL-a
+        # databases = self.mySQL_utils.get_all_databases()
+        # if databases is None:
+        #     return
+        #
+        # database_names = [database[0] for database in databases]
+        # item, ok = QtWidgets.QInputDialog.getItem(None, "Choose your database for MongoDB",
+        #                                           "List of databases:", database_names, 0, False)
+        #
+        # if not ok or not item:
+        #     return
+        #
+        # database_name = item
+        #
+        # # sql_load = self.mySQL_utils.load_and_connect_db(statusBar)
+        # # mongo_load = self.mongo_utils.load_and_connect_db(statusBar)
+        #
+        # #  Load the configuration files
+        # relationships = load_config("example_mysql.json")
+        # doc = load_config("example.json")
+        #
+        # #  Retrieve data from the relational database
+        # database = database_name
+        # table = list(doc.keys())[0]
+        # result_doc = {"title": table}
+        # data = self.mySQL_utils.search(database, table, doc[table]["columns"], doc[table]["values"]).fetchall()
+        #
+        # for t in doc[table]["content"]:
+        #     content = self.mySQL_utils.search(database, t, [relationships[t][table]], doc[table]["values"]).fetchall()
+        #     result_doc[t] = content
+        #
+        # # Write the transformed data to a JSON file
+        # with open("result_doc.json", "w", encoding="utf-8") as f:
+        #     json.dump(result_doc, f)
+        #
+        # # Connect to MongoDB and insert the transformed data
+        # client = MongoClient("mongodb://root:root@localhost:27017/")  # PedjaDOcker
+        # # client = MongoClient("mongodb://root:root@localhost:27017/")  #ForOthersMembers
+        # db = client["upravljanje_projektom"]
+        # collection = db["docs"]
+        # with open("result_doc.json", "r", encoding="utf-8") as f:
+        #     result_data = json.load(f)
+        #     collection.insert_one(result_data)
 
     # def delete_row(self, databaseDataTableWidget, database_name, collection_name):
     #     row_id = databaseDataTableWidget
     #     self.mySQL_utils.delete_row(database_name, collection_name, )
 
     # Arango load and connect database
+
     def load_and_connect_arangodb(self, arangoDBTreeWidget, statusBar):
         self.arango_utils.load_and_connect_db(statusBar)
 
@@ -224,7 +231,8 @@ class MainWindowModel:
             for database_name in databases:
                 arango_database_item = QTreeWidgetItem(arangoDBTreeWidget)
                 arango_database_item.setText(0, database_name)
-                arango_db_collections = self.arango_utils.get_all_tables(database_name)
+                arango_db_collections = self.arango_utils.get_all_tables(
+                    database_name)
                 collections = self.arango_utils.get_all_tables(database_name)
 
                 for collection in collections:
@@ -232,6 +240,7 @@ class MainWindowModel:
                     collection_item.setText(0, collection)
 
     def add_arango_table_tab(self, database_name, table_name, dataTabWidget, statusBar, CRUDActionsViewer):
-        arango_tab_viewer = ArangoTabViewer(database_name, table_name, statusBar, CRUDActionsViewer)
+        arango_tab_viewer = ArangoTabViewer(
+            database_name, table_name, statusBar, CRUDActionsViewer)
         dataTabWidget.addTab(arango_tab_viewer, table_name)
         dataTabWidget.setCurrentWidget(arango_tab_viewer)

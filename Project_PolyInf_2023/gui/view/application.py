@@ -1,9 +1,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QScrollArea
 from crud_actions_component.crud_actions_viewer import CRUDActionsViewer
 
 from gui.controller.main_window_controller import MainWindowController
 from reference_tables_component.ref_tables_viewer import RefTablesViewer
-
 
 # TODO:U ovoj klasi resiti problem Layout-a!!!!
 
@@ -125,8 +125,10 @@ class MainWindowViewer(object):  # Stigao sam do RefTables component
         self.arangoTab = QtWidgets.QWidget()
         self.arangoTab.setObjectName("arangoTab")
         self.verticalLayoutWidgetArangoDB = QtWidgets.QWidget(self.arangoTab)
-        self.verticalLayoutWidgetArangoDB.setGeometry(QtCore.QRect(2, 5, 231, 360))
-        self.verticalLayoutWidgetArangoDB.setObjectName("verticalLayoutWidgetArangoDB")
+        self.verticalLayoutWidgetArangoDB.setGeometry(
+            QtCore.QRect(2, 5, 231, 360))
+        self.verticalLayoutWidgetArangoDB.setObjectName(
+            "verticalLayoutWidgetArangoDB")
         self.arangoDBVerticalLayout = QtWidgets.QVBoxLayout(
             self.verticalLayoutWidgetArangoDB)
         self.arangoDBVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -145,7 +147,8 @@ class MainWindowViewer(object):  # Stigao sam do RefTables component
         self.horizontal.setObjectName("horizontallayoutforbuttonsArango")
         self.connectarangoDBPushButton = QtWidgets.QPushButton(
             self.verticalLayoutWidgetArangoDB)
-        self.connectarangoDBPushButton.setObjectName("connectarangoDBPushButton")
+        self.connectarangoDBPushButton.setObjectName(
+            "connectarangoDBPushButton")
         self.horizontalArango.addWidget(self.connectarangoDBPushButton)
         self.arangoDBVerticalLayout.addLayout(self.horizontalArango)
 
@@ -171,6 +174,8 @@ class MainWindowViewer(object):  # Stigao sam do RefTables component
         self.refLabel.setObjectName("RefLabel")
         self.refLabel.setGeometry(QtCore.QRect(265, 305, 150, 25))
         self.refLabel.setVisible(False)
+        self.scroll = QScrollArea()
+        self.scroll.setWidget(self.centralwidget)
 
         # self.referenceTabWidget = QtWidgets.QTabWidget(self.centralwidget)
         # self.referenceTabWidget.setGeometry(QtCore.QRect(260, 330, 1650, 225))
@@ -232,12 +237,10 @@ class MainWindowViewer(object):  # Stigao sam do RefTables component
             lambda x: self.main_window_controller.close_tab(x, self.nosqlTabWidget))
 
         # Za sve
-        self.dataTabWidget.currentChanged.connect(
-            lambda x: self.main_window_controller.change_tab_controller_for_CRUDActionViewer(
-                x, self.dataTabWidget, self.CRUDActionsViewer))
+        self.dataTabWidget.currentChanged.connect(lambda x: self.main_window_controller.change_tab_controller_for_CRUDActionViewer(
+            x, self.dataTabWidget, self.CRUDActionsViewer))
         self.dataTabWidget.currentChanged.connect(lambda x: self.main_window_controller.show_mysql_ref_tables(
-            x, self.dataTabWidget, self.refTablesViewer, self.refLabel, MainWindow, self.statusbar,
-            self.CRUDActionsViewer))
+            x, self.dataTabWidget, self.refTablesViewer, self.refLabel, MainWindow, self.statusbar, self.CRUDActionsViewer))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

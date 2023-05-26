@@ -1,4 +1,10 @@
 {
+    "naslov": {
+        "naslov1": "Pregled kompanija koje su registrovane u",
+        "naslov2": "<naziv drzave= Drzava.naziv gde je Drzava.Oznaka=<p1>>,",
+        "naslov3": "“I njihovih poslovnih partnera sa istim mestom sedišta na dan:” <p2>"
+ },
+
     "sta_je_predmet_projekta":{ //Najnizi sloj hijerarhije(Privezak kljuceva)
         "drzava":"<oznaka drzave>",
         "kompanije":{

@@ -1,6 +1,9 @@
 from PyQt5 import QtWidgets
 from PyQt5 import QtCore
 
+lista_otvorenih_tabova = []
+
+
 class RefTablesViewer(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent=parent)
