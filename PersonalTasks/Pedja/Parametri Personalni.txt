@@ -1,0 +1,4 @@
+	NosQL
+
+p1 = p11(oznaka drzave), p12(id kompanije)
+p2 = p21(oznaka_drzave), p22(id_kompanije), p23(kataloski_broj), p24(tip)
