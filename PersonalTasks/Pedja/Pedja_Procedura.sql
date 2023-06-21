@@ -1,5 +1,16 @@
 CREATE DEFINER=`root`@`localhost` PROCEDURE `pedja_procedura`(IN naziv_kompanije varchar(60), naziv_proizvoda varchar(60))
 BEGIN
+	/*CREATE TEMPORARY TABLE IF NOT EXISTS temp_results (
+        PS_ID INT,
+        PS_NAZIV VARCHAR(255),
+        PROJ_NAZIV VARCHAR(255),
+        SPR_KATBR VARCHAR(10),
+        SPR_NAZIV  VARCHAR(255)
+    );
+
+    INSERT INTO temp_results (PS_ID, PS_NAZIV, PROJ_NAZIV,
+        SPR_KATBR, SPR_NAZIV)*/
+        
 	SELECT DISTINCT ps.PS_ID, ps.PS_NAZIV, prs.PROJ_NAZIV, e.PS_ID, e.SPR_KATBR, kp.SPR_NAZIV
 
 	FROM poslovni_subjekat ps
@@ -10,5 +21,7 @@ BEGIN
 
 	WHERE ps.PS_NAZIV = naziv_kompanije AND kp.SPR_NAZIV = naziv_proizvoda;
 
+	/*SELECT * FROM temp_results;
 
+    DROP TEMPORARY TABLE IF EXISTS temp_results;*/
 END
